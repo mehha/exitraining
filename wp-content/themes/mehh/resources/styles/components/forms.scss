@@ -1,0 +1,33 @@
+//.wpforms-field-label {
+//}
+
+select {
+  @extend .form-select;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+textarea {
+  @extend .form-control;
+}
+
+input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+}
+
+//General
+@media (max-width: 380px) {
+  #rc-imageselect,
+  .g-recaptcha,
+  .special-captcha {
+    transform: scale(0.86);
+    transform-origin: 0 0;
+  }
+}
+
+.captcha-error > div > div iframe {
+  border: 1px solid $danger;
+}

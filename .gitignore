@@ -1,0 +1,6 @@
+/.idea
+/wp-content/uploads/
+/wp-content/cache/
+/wp-content/plugins/ns-cloner-pro/
+/wp-content/plugins/ns-cloner-site-copier/
+config-local.php

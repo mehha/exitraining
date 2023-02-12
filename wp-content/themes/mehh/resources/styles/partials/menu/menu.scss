@@ -1,0 +1,14 @@
+.navbar {
+  .nav-item {
+    @include wp-current-menu-item {
+      > a {
+        color: var(--bs-primary);
+      }
+    }
+  }
+
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
+}

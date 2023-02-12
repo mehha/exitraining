@@ -1,0 +1,25 @@
+@include media-breakpoint-down(lg) {
+  .navbar-primary {
+    background-color: $gray-dark;
+
+    .navbar-nav {
+      margin-top: 20px;
+
+      .nav-link {
+        color: $white;
+      }
+
+      .sub-menu {
+        a {
+          padding-left: 0.5rem;
+        }
+
+        .sub-menu {
+          a {
+            padding-left: 1rem;
+          }
+        }
+      }
+    }
+  }
+}
