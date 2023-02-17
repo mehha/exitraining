@@ -225,18 +225,6 @@ add_action('widgets_init', function () {
     ] + $config);
 });
 
-//Master redirect
-add_action('wp', function () {
-    if (get_current_blog_id() == 1 && $GLOBALS['pagenow'] !== 'wp-login.php' && $GLOBALS['pagenow'] !== 'wp-register.php' && !is_admin()) {
-
-        $domain = 'et';
-
-        wp_redirect(get_bloginfo('url') . '/' . $domain . '/', 301);
-        exit;
-
-    }
-});
-
 //Add lang files https://roots.io/sage/docs/localization/
 add_action('after_setup_theme', function () {
     load_theme_textdomain('sage', get_template_directory() . '/resources/lang');
@@ -246,7 +234,7 @@ add_action('after_setup_theme', function () {
 //http://minusadam.test/et/wp-admin/edit-comments.php
 add_action('admin_menu', function () {
     remove_menu_page( 'edit-comments.php' );
-    remove_menu_page( 'edit.php?post_type=acf-field-group' );
+//    remove_menu_page( 'edit.php?post_type=acf-field-group' );
     remove_menu_page( 'sb-instagram-feed' );
 }, 1000);
 

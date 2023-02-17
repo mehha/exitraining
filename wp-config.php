@@ -20,20 +20,16 @@
 
 // ** Database settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-if ( file_exists( dirname( __FILE__ ) . '/config-local.php' ) ) {
-    include( dirname( __FILE__ ) . '/config-local.php' );
-} else {
-    define( 'DB_NAME', '' );
+define( 'DB_NAME', 'exitraining' );
 
-    /** Database username */
-    define( 'DB_USER', '' );
+/** Database username */
+define( 'DB_USER', 'root' );
 
-    /** Database password */
-    define( 'DB_PASSWORD', '' );
+/** Database password */
+define( 'DB_PASSWORD', 'root' );
 
-    /** Database hostname */
-    define( 'DB_HOST', 'localhost' );
-}
+/** Database hostname */
+define( 'DB_HOST', 'localhost' );
 
 /** Database charset to use in creating database tables. */
 define( 'DB_CHARSET', 'utf8mb4' );
@@ -52,14 +48,14 @@ define( 'DB_COLLATE', '' );
  *
  * @since 2.6.0
  */
-define( 'AUTH_KEY',         '=TRPI2+oaOIC<1wtz&(oLoG_YRS_lAW%(#owt|UP`|QNBlaMy%Fb6,TwOS?pbH3(' );
-define( 'SECURE_AUTH_KEY',  'Q~w/jOrP,8tQB(sz%t/g-<Gr2:><$]JJIlNe3g1=kOfa%)Q)&7:K1`Z`3mGd@|MJ' );
-define( 'LOGGED_IN_KEY',    'f$>5kZWpr#yHb N,zdt&TkUiJLo~>m!nPG$g2lKP8}&_p5 nr(#/j#?g@+rzD}48' );
-define( 'NONCE_KEY',        '@jq_`.%FM<G0X&3]df%GyZC[%}6^{~Y=N>--5?g]PJ78iJ7AQd@7qJKsM9<mhZ!]' );
-define( 'AUTH_SALT',        '3X{xgUr/.*% LaI%szS2s5_7fpJZ2#?N>D+y#|X<2a76q1hx.>9QKw P:F WMUSk' );
-define( 'SECURE_AUTH_SALT', '1sI}P(I3<gLi_5ukZ2#6*cJQE2&,WIXDnF06{nc[$b/A9!Lb@,U4U,:_ZB9U$J#*' );
-define( 'LOGGED_IN_SALT',   'e~DVVK`nyC jF}h,)[U <U{4B4P=L)BTNE4`~b>Ya&T4M6ZmYQJ;}#qDgX;FS6Yd' );
-define( 'NONCE_SALT',       'B#r<W^1ejW>pe~Ro~i;&=]R3d|fzhHOtkuh5t)3WNWL3dJJZOA5x15XBQvs4.Ga>' );
+define( 'AUTH_KEY',         'jO[s!z9=laGEb([<%I@.,uDM/unK!jokHoLVxi|H@y7W!<ffiO[+j}$[u]iCnu.E' );
+define( 'SECURE_AUTH_KEY',  'QiV9Q)OMT6@5s939/*J 2)AN6~>R&eF1,obF /~7K[F~hdKi&=JPl-69+S5n*flH' );
+define( 'LOGGED_IN_KEY',    'f8~VJoS3BEf$vnQ=F[4,V}.om5:BP#vQdxiW6 W]x3mH^n|1X>6BU`}YTs4mW J{' );
+define( 'NONCE_KEY',        '+JUoXOPP4T:c=O+V&wl~IL=`tL)}I_!kJ#sHpU[|P{^I/9HZw>c=>?/?G(W!zmAj' );
+define( 'AUTH_SALT',        ',ovLaOhY<+cL}vdrDw$yC0L$Q*{PW,Dmd*Us()4s3I25AST_u0f*i4imQ|N5pjxF' );
+define( 'SECURE_AUTH_SALT', 'G N.r2?279Mn]2_O1=XHTIlC/GrnMDW{rKeurZ{=h>2q[#F#VBbhCL{4kZ#}%pT(' );
+define( 'LOGGED_IN_SALT',   'D/Tg?KW5oD?zy7nzgq`+[E2_,W1C++T8wsNq)NZpzn@q6/a*6%xlr3uEA]x-u_*J' );
+define( 'NONCE_SALT',       'zui@Y[s=mG& Cnc|nY8o0}/DObAaqS`/7e~zRTE&tkq6ymy F%]G&3B&0Uc`#h$2' );
 
 /**#@-*/
 
@@ -87,12 +83,7 @@ define( 'WP_DEBUG', false );
 
 /* Add any custom values between this line and the "stop editing" line. */
 
-define( 'MULTISITE', true );
-define( 'SUBDOMAIN_INSTALL', false );
-define( 'DOMAIN_CURRENT_SITE', 'mehh.test' );
-define( 'PATH_CURRENT_SITE', '/' );
-define( 'SITE_ID_CURRENT_SITE', 1 );
-define( 'BLOG_ID_CURRENT_SITE', 1 );
+
 
 /* That's all, stop editing! Happy publishing. */
 
