@@ -2,7 +2,9 @@
   <nav class="navbar navbar-primary navbar-expand-lg bg-light">
     <div class="container">
 
-      <a class="navbar-brand" href="{{ home_url('/') }}">{{$siteName}}</a>
+      <a class="navbar-brand" href="{{ home_url('/') }}" aria-label="{{$siteName}} logo">
+        <img width="194" height="48" alt="Logo" src="@asset('/images/logo.webp')" />
+      </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarPrimary" aria-controls="navbarPrimary" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
