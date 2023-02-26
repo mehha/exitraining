@@ -1,0 +1,14 @@
+.swiper {
+  overflow: visible;
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    border-radius: 50%;
+    border: 1px solid transparent;
+    @include theme-transition;
+
+    @include hover-focus-active {
+      border-color: $gray-500;
+    }
+  }
+}

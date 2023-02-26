@@ -24,5 +24,6 @@ return array(
     'b6b991a57620e2fb6b2f66f03fe9ddc2' => $vendorDir . '/symfony/string/Resources/functions.php',
     'e39a8b23c42d4e1452234d762b03835a' => $vendorDir . '/ramsey/uuid/src/functions.php',
     '7018e3dbeb54682c59da60bb2ff4f971' => $vendorDir . '/roots/support/helpers.php',
+    '2fb983e63247f84d8365e00e3015e40b' => $vendorDir . '/log1x/sage-svg/src/helpers.php',
     '1d3e394e13b0f60fc9509fa2e09fa96e' => $vendorDir . '/roots/acorn/src/Roots/helpers.php',
 );

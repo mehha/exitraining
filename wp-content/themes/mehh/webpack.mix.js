@@ -37,7 +37,8 @@ mix
 
 mix
   .copyWatched('resources/images', 'public/images')
-  .copyWatched('resources/fonts', 'public/fonts');
+  .copyWatched('resources/fonts', 'public/fonts')
+  .copyWatched('resources/icons', 'public/icons')
 
 mix
   .sourceMaps(false, 'inline-source-map')

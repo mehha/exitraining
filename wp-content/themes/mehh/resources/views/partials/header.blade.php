@@ -1,5 +1,5 @@
 <header class="banner fixed-top">
-  <nav class="navbar navbar-primary navbar-expand-lg bg-light">
+  <nav class="navbar navbar-primary navbar-expand-lg">
     <div class="container">
 
       <a class="navbar-brand" href="{{ home_url('/') }}" aria-label="{{$siteName}} logo">

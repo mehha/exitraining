@@ -1,0 +1,25 @@
+.training-list-container {
+  .training-list-item {
+    box-shadow: 0 64px 50px -32px rgb(6 7 37 / 3%);
+    min-height: 140px;
+    border-radius: $border-radius;
+    padding: 2rem;
+    @include theme-transition;
+
+    .title {
+      color: $body-color;
+      font-size: 18px;
+      font-weight: 500;
+      margin-top: 1.5rem;
+      @include theme-transition;
+    }
+
+    @include hover-focus-active {
+      box-shadow: 0 64px 50px -32px rgb(6 7 37 / 6%);
+
+      .title {
+        color: $link-color;
+      }
+    }
+  }
+}

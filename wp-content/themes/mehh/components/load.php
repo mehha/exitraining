@@ -5,6 +5,7 @@ $acf_fields = array(
     'contact-form/contact-form.php',
     'accordion/accordion.php',
     'training/training.php',
+    'testimonial/testimonial.php',
 );
 
 foreach ($acf_fields as $key => $field) {

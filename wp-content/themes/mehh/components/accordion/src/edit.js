@@ -73,7 +73,7 @@ export default function Edit({attributes, setAttributes}) {
 					<div className="panel-body-container">
 						<PanelBody
 							title={`${item.title.substring(0,20)} ${item.title.length > 20 ? '...' : ''}`}
-							initialOpen={true}
+							initialOpen={items.length === i + 1}
 						>
 							<PanelRow>
 								<RichText

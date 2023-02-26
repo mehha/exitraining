@@ -4,21 +4,23 @@
 @import "config/mixins/mixins";
 @import "config/utilities";
 
-//Blocks
-@import "blocks/cover";
-
 //Common
 @import "common/global";
 @import "common/type";
 @import "common/layout";
 @import "common/wp-classes";
+@import "common/specific";
 
 //Components
+@import "components/components-global";
 @import "components/buttons";
 @import "components/fancybox";
 @import "components/forms";
 @import "components/navs-tabs";
 @import "components/tables";
+@import "components/training";
+@import "components/swiper";
+@import "components/cover";
 
 //Partials
 @import "partials/menu/menu";

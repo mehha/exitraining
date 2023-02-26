@@ -1,12 +1,16 @@
 @include media-breakpoint-down(lg) {
+  header.banner {
+    border-bottom-color: $gray-200!important;
+  }
+
   .navbar-primary {
-    background-color: $gray-dark;
+    background-color: $white;
 
     .navbar-nav {
       margin-top: 20px;
 
       .nav-link {
-        color: $white;
+        //color: $white;
       }
 
       .sub-menu {

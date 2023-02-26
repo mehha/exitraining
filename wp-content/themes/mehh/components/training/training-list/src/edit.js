@@ -65,17 +65,7 @@ export default function Edit({attributes, setAttributes}) {
 
 		<div {...useBlockProps()}>
 			<h4 className="mb-0">{__('Training list', 'sage')}</h4>
-			{!posts && 'Loading'}
-			{posts && posts.length === 0 && 'No Posts'}
-			<div className="d-flex">
-				{posts && posts.length > 0 && (
-					posts.map(singleP => {
-						return (
-							<p>{singleP.title.rendered}</p>
-						)
-					})
-				)}
-			</div>
+			<span>Number of items to show: {numberOfItems}</span>
 		</div>
 		</>
 	);

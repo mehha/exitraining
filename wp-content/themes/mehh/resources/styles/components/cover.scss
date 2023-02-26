@@ -1,0 +1,11 @@
+.wp-block-cover {
+  > * {
+    border-radius: $border-radius;
+  }
+
+  .wp-block-cover__inner-container h1 {
+    @include media-breakpoint-up(xl) {
+      max-width: 600px;
+    }
+  }
+}

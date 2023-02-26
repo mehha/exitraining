@@ -12,6 +12,7 @@ import {handleMenu} from "./components/menu";
 import {handleTables} from "./components/tables";
 import {handleCheckScroll} from "./utilities/check-scroll";
 import {handleForms} from "./components/forms";
+import {handleSwiper} from "./components/swiper";
 
 const mountedFns = [
   handleFancybox,
@@ -19,6 +20,7 @@ const mountedFns = [
   handleTables,
   handleCheckScroll,
   handleForms,
+  handleSwiper,
 ]
 
 // Run fn-s

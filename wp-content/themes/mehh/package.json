@@ -18,7 +18,7 @@
     "lint:js": "eslint resources/scripts",
     "lint:css": "stylelint \"resources/**/*.{css,scss,vue}\"",
     "translate": "npm run translate:pot && npm run translate:js",
-    "translate:pot": "wp i18n make-pot . ./resources/lang/sage.pot --ignore-domain --include=\"app,resources\"",
+    "translate:pot": "wp i18n make-pot . ./resources/lang/sage.pot --ignore-domain --include=\"app,resources,components\"",
     "translate:js": "wp i18n make-json ./resources/lang --pretty-print"
   },
   "devDependencies": {
@@ -43,5 +43,8 @@
     "sass-loader": "13.2.0",
     "stylelint": "^14.15.0",
     "stylelint-config-standard-scss": "^6.1.0"
+  },
+  "dependencies": {
+    "swiper": "^9.0.5"
   }
 }

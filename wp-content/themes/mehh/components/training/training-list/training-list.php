@@ -39,11 +39,22 @@ function training_list_dynamic_render_callback($attr)
 	$posts = get_posts( $args );
 
 	if( ! empty( $posts ) ){
-		$output = '<div class="d-flex gap-4">';
-		foreach ( $posts as $p ){
-			$output .= '<div><a href="' . esc_url( get_permalink( $p->ID ) ) . '">'
-			. $p->post_title . '</a></div>';
-		}
+		$output = '<div class="wp-block-row swiper training-list-container">';
+			$output .= '<div class="swiper-wrapper">';
+			foreach ( $posts as $p ){
+				$output .=
+					'<a class="d-inline-block training-list-item swiper-slide bg-white text-body" href="' . esc_url( get_permalink( $p->ID ) ) . '">
+						<div class="date">'.get_field("begin_date", $p->ID).'</div>
+						<div class="category text-primary text-uppercase">'.get_the_category($p->ID)[0]->name.'</div>
+						<div class="title">'.$p->post_title.'</div>
+					</a>';
+			}
+			$output .= '</div>';
+
+			$output .= '<div class="button-container position-relative d-flex gap-3 items-center justify-content-center mt-4">';
+				$output .= '<button class="swiper-button-prev bg-transparent p-2">'.get_svg('ArrowLeft').'</button>';
+				$output .= '<button class="swiper-button-next bg-transparent p-2">'.get_svg('ArrowRight').'</button>';
+			$output .= '</div>';
 		$output .= '</div>';
 	}
 	return $output ?? '<strong>Sorry. No posts matching your criteria!</strong>';

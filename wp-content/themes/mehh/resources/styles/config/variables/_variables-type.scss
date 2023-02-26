@@ -18,7 +18,7 @@
 //  font-display: block;
 //}
 
-$font-primary: sans-serif;
+$font-primary: "Kumbh Sans", sans-serif;
 $font-secondary: serif;
 
 $font-family-base: $font-primary;
@@ -37,23 +37,23 @@ $font-size-sm: 14px;
 $small-font-size: 12px;
 
 //In content
-$headings-font-weight: 700;
+$headings-font-weight: 500;
 $headings-line-height: 1.2;
 $headings-margin-bottom: 1rem;
-$h1-font-size: 40px;
-$h2-font-size: 32px;
-$h3-font-size: 24px;
-$h4-font-size: 20px;
+$h1-font-size: 54px;
+$h2-font-size: 40px;
+$h3-font-size: 32px;
+$h4-font-size: 24px;
 $h5-font-size: 16px;
 $h6-font-size: 16px;
 
 //Modules etc
-$display-font-weight: 700;
+$display-font-weight: 500;
 $display-font-sizes: (
-  1: 40px,
-  2: 32px,
-  3: 24px,
-  4: 20px,
+  1: 54px,
+  2: 40px,
+  3: 32px,
+  4: 24px,
   5: 18px,
   6: 16px
 );

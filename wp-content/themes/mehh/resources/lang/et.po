@@ -1,11 +1,9 @@
-# Copyright (C) 2023 Mehh Media based on Roots
-# This file is distributed under the MIT License.
 msgid ""
 msgstr ""
 "Project-Id-Version: Mehh Media Theme 1.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/mehh\n"
-"POT-Creation-Date: 2023-01-26T12:20:59+02:00\n"
-"PO-Revision-Date: 2023-01-26 12:27+0200\n"
+"POT-Creation-Date: 2023-02-19T19:13:33+02:00\n"
+"PO-Revision-Date: 2023-02-19 19:17+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: et\n"
@@ -39,24 +37,16 @@ msgstr ""
 msgid "Primary Navigation"
 msgstr ""
 
-#: app/setup.php:75
-msgid "Top Navigation"
-msgstr ""
-
-#: app/setup.php:214
+#: app/setup.php:212
 msgid "Primary"
 msgstr ""
 
-#: app/setup.php:219
+#: app/setup.php:217
 msgid "Header"
 msgstr ""
 
-#: app/setup.php:224
+#: app/setup.php:222
 msgid "Footer"
-msgstr ""
-
-#: app/setup.php:229
-msgid "Woocommerce sidebar"
 msgstr ""
 
 #: app/View/Composers/ContactForm.php:43
@@ -89,6 +79,36 @@ msgstr ""
 msgid "Not Found"
 msgstr ""
 
+#: components/training/training-acf.php:7
+msgid "Training settings"
+msgstr ""
+
+#: components/training/training-acf.php:11
+#: resources/views/partials/entry-meta-trainings.blade.php:3
+msgid "Date"
+msgstr "Kuupäev"
+
+#: components/training/training-acf.php:29
+#: resources/views/partials/entry-meta-trainings.blade.php:10
+msgid "Price"
+msgstr "Hind"
+
+#: components/training/training-acf.php:44
+msgid "Contact info"
+msgstr "Kontakt info"
+
+#: components/training/training.php:11
+msgid "Trainings"
+msgstr ""
+
+#: components/training/training.php:12
+msgid "Training"
+msgstr ""
+
+#. Template Name of the theme
+msgid "Home"
+msgstr ""
+
 #. Template Name of the theme
 msgid "Custom Template"
 msgstr ""
@@ -100,7 +120,7 @@ msgstr ""
 #: resources/views/forms/search.blade.php:4
 msgctxt "label"
 msgid "Search for:"
-msgstr ""
+msgstr "Otsi:"
 
 #: resources/views/forms/search.blade.php:11
 msgctxt "placeholder"
@@ -140,6 +160,7 @@ msgid "Comments are closed."
 msgstr ""
 
 #: resources/views/partials/content-page.blade.php:3
+#: resources/views/partials/content-single-trainings.blade.php:16
 #: resources/views/partials/content-single.blade.php:16
 msgid "Pages:"
 msgstr ""
@@ -167,3 +188,39 @@ msgstr "Peate nõustuma saatmiseks."
 #: resources/views/shortcodes/contact-form.blade.php:55
 msgid "Submit"
 msgstr "Saada"
+
+#: components/training/training-list/build/index.js:1
+#: components/training/training-list/src/edit.js:52
+msgid "Training list settings"
+msgstr "Koolituse seaded"
+
+#: components/training/training-list/build/index.js:1
+#: components/training/training-list/src/edit.js:67
+msgid "Training list"
+msgstr "Koolitus"
+
+#: components/accordion/build/block.json components/accordion/src/block.json
+msgctxt "block title"
+msgid "Accordion"
+msgstr ""
+
+#: components/accordion/build/block.json components/accordion/src/block.json
+#: components/testimonial/build/block.json
+#: components/testimonial/src/block.json
+#: components/training/training-list/build/block.json
+#: components/training/training-list/src/block.json
+msgctxt "block description"
+msgid "Example block scaffolded with Create Block tool."
+msgstr ""
+
+#: components/testimonial/build/block.json
+#: components/testimonial/src/block.json
+msgctxt "block title"
+msgid "Testimonial"
+msgstr ""
+
+#: components/training/training-list/build/block.json
+#: components/training/training-list/src/block.json
+msgctxt "block title"
+msgid "Training List"
+msgstr "Koolitus"

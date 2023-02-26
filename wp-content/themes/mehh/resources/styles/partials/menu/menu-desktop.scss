@@ -1,5 +1,17 @@
 @include media-breakpoint-up(lg) {
-  .navbar {
+  .navbar-primary {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    @include theme-transition;
+
+    .navbar-nav {
+      > .nav-item {
+        > .nav-link {
+          --bs-navbar-nav-link-padding-x: 20px;
+        }
+      }
+    }
+
     .nav-item {
       //.nav-link {
       //  padding-left: 1rem;

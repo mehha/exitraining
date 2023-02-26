@@ -12,17 +12,19 @@
 }
 
 header.banner {
+  border-bottom: 1px solid transparent;
+  background-color: transparent;
   @include theme-transition(transform, 0.2s, ease-in-out);
-
-  border-bottom: 1px solid $gray-light;
 }
 
-.not-top.scrolled-down {
+.not-top {
   header.banner {
     @include media-breakpoint-up(xl) {
-      transform: translateY(-39px);
+      //transform: translateY(-16px);
+      border-bottom: 1px solid $gray-light;
+      background-color: $white;
 
-      .navbar-main {
+      .navbar-primary {
         padding-top: 8px;
         padding-bottom: 8px;
       }

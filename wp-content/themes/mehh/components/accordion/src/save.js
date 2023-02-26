@@ -16,7 +16,7 @@ import {RawHTML} from '@wordpress/element';
  */
 export default function save({attributes}) {
 	return (
-		<div {...useBlockProps.save()}>
+		<div {...useBlockProps.save({ className: 'wp-block-row' })}>
 			<div className="accordion" id="accordionModule">
 				{attributes?.items.length && attributes?.items.map((singleItem, key) => {
 					return (

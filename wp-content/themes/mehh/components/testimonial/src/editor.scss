@@ -1,0 +1,58 @@
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.wp-block-create-block-testimonial {
+  margin-bottom: 28px;
+
+  .components-panel {
+	border: none;
+  }
+
+  .panel-body-container {
+    position: relative;
+	margin-top: 16px;
+	box-shadow: inset 0 0 0 1px #d9d9d9;
+ 	outline: 1px solid transparent;
+  }
+
+  .components-panel__body {
+	flex: 1;
+  }
+
+  .components-panel__header {
+	padding: 0;
+  }
+
+  .components-panel__body-title {
+	background-color: #ececec;
+
+	button {
+	  padding-top: 10px;
+	  padding-bottom: 10px;
+	}
+  }
+
+  .delete-btn {
+	position: absolute;
+	right: -8px;
+	top: -8px;
+	border: 1px solid gray;
+	background: white;
+	border-radius: 50%;
+	padding: 0!important;
+	min-width: 18px;
+	height: 18px;
+
+	svg {
+	  height: 16px;
+	  width: 16px;
+	}
+  }
+
+  .add-btn {
+	margin-top: 1rem;
+  }
+}

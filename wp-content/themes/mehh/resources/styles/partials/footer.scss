@@ -1,5 +1,32 @@
 footer.content-info {
+  margin-top: auto;
   border-top: 1px solid $gray-light;
-  padding-top: 2rem;
-  padding-bottom: 1rem;
+  padding-top: 3rem;
+  padding-bottom: 0;
+
+  section {
+    &:last-child {
+      border-top: 1px solid $gray-light;
+      padding-top: 2rem;
+
+      .wp-block-columns {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+
+  .wp-block-page-list {
+    display: grid;
+    gap: 1rem;
+    @include media-breakpoint-up(md) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    a {
+      color: $body-color;
+      @include hover-focus-active {
+        color: $link-hover-color;
+      }
+    }
+  }
 }

@@ -25,6 +25,7 @@ class ComposerStaticInit0459df9e79484dee631893d0f1ba1fd9
         'b6b991a57620e2fb6b2f66f03fe9ddc2' => __DIR__ . '/..' . '/symfony/string/Resources/functions.php',
         'e39a8b23c42d4e1452234d762b03835a' => __DIR__ . '/..' . '/ramsey/uuid/src/functions.php',
         '7018e3dbeb54682c59da60bb2ff4f971' => __DIR__ . '/..' . '/roots/support/helpers.php',
+        '2fb983e63247f84d8365e00e3015e40b' => __DIR__ . '/..' . '/log1x/sage-svg/src/helpers.php',
         '1d3e394e13b0f60fc9509fa2e09fa96e' => __DIR__ . '/..' . '/roots/acorn/src/Roots/helpers.php',
     );
 
@@ -83,6 +84,7 @@ class ComposerStaticInit0459df9e79484dee631893d0f1ba1fd9
         ),
         'L' => 
         array (
+            'Log1x\\SageSvg\\' => 14,
             'League\\MimeTypeDetection\\' => 25,
             'League\\Flysystem\\' => 17,
         ),
@@ -264,6 +266,10 @@ class ComposerStaticInit0459df9e79484dee631893d0f1ba1fd9
         array (
             0 => __DIR__ . '/..' . '/monolog/monolog/src/Monolog',
         ),
+        'Log1x\\SageSvg\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/log1x/sage-svg/src',
+        ),
         'League\\MimeTypeDetection\\' => 
         array (
             0 => __DIR__ . '/..' . '/league/mime-type-detection/src',
@@ -278,8 +284,8 @@ class ComposerStaticInit0459df9e79484dee631893d0f1ba1fd9
         ),
         'Illuminate\\Support\\' => 
         array (
-            0 => __DIR__ . '/..' . '/illuminate/macroable',
-            1 => __DIR__ . '/..' . '/illuminate/collections',
+            0 => __DIR__ . '/..' . '/illuminate/collections',
+            1 => __DIR__ . '/..' . '/illuminate/macroable',
             2 => __DIR__ . '/..' . '/illuminate/support',
         ),
         'Illuminate\\Session\\' => 
@@ -364,6 +370,7 @@ class ComposerStaticInit0459df9e79484dee631893d0f1ba1fd9
         'App\\Providers\\ThemeServiceProvider' => __DIR__ . '/../..' . '/app/Providers/ThemeServiceProvider.php',
         'App\\View\\Components\\Alert' => __DIR__ . '/../..' . '/app/View/Components/Alert.php',
         'App\\View\\Composers\\App' => __DIR__ . '/../..' . '/app/View/Composers/App.php',
+        'App\\View\\Composers\\ContactForm' => __DIR__ . '/../..' . '/app/View/Composers/ContactForm.php',
         'App\\View\\Composers\\Page' => __DIR__ . '/../..' . '/app/View/Composers/Page.php',
         'App\\View\\Composers\\Post' => __DIR__ . '/../..' . '/app/View/Composers/Post.php',
         'Attribute' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
@@ -1157,6 +1164,8 @@ class ComposerStaticInit0459df9e79484dee631893d0f1ba1fd9
         'League\\MimeTypeDetection\\GeneratedExtensionToMimeTypeMap' => __DIR__ . '/..' . '/league/mime-type-detection/src/GeneratedExtensionToMimeTypeMap.php',
         'League\\MimeTypeDetection\\MimeTypeDetector' => __DIR__ . '/..' . '/league/mime-type-detection/src/MimeTypeDetector.php',
         'League\\MimeTypeDetection\\OverridingExtensionToMimeTypeMap' => __DIR__ . '/..' . '/league/mime-type-detection/src/OverridingExtensionToMimeTypeMap.php',
+        'Log1x\\SageSvg\\SageSvg' => __DIR__ . '/..' . '/log1x/sage-svg/src/SageSvg.php',
+        'Log1x\\SageSvg\\SageSvgServiceProvider' => __DIR__ . '/..' . '/log1x/sage-svg/src/SageSvgServiceProvider.php',
         'Monolog\\Attribute\\AsMonologProcessor' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Attribute/AsMonologProcessor.php',
         'Monolog\\DateTimeImmutable' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/DateTimeImmutable.php',
         'Monolog\\ErrorHandler' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/ErrorHandler.php',

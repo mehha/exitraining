@@ -1,0 +1,11 @@
+.wp-block-row,
+.wp-block-group,
+.wp-block-cover {
+  margin-bottom: 4rem;
+}
+
+.wp-block-rounded-images {
+  img {
+    border-radius: $border-radius;
+  }
+}
