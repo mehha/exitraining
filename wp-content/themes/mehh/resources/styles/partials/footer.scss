@@ -10,7 +10,13 @@ footer.content-info {
       padding-top: 2rem;
 
       .wp-block-columns {
-        margin-bottom: 1rem;
+        margin-bottom: 2rem;
+        align-items: center!important;
+
+        p:last-child,
+        ul {
+          margin-bottom: 0;
+        }
       }
     }
   }
@@ -20,6 +26,14 @@ footer.content-info {
     gap: 1rem;
     @include media-breakpoint-up(md) {
       grid-template-columns: repeat(2, 1fr);
+    }
+
+    li {
+      @include wp-current-menu-item {
+        > a {
+          color: var(--bs-primary);
+        }
+      }
     }
 
     a {

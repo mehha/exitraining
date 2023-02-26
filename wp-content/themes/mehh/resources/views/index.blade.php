@@ -1,8 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-  @include('partials.page-header')
-
   @if (! have_posts())
     <x-alert type="warning">
       {!! __('Sorry, no results were found.', 'sage') !!}
@@ -12,7 +10,14 @@
   @endif
 
   @while(have_posts()) @php(the_post())
-    @includeFirst(['partials.content-' . get_post_type(), 'partials.content'])
+  <div class="wrap container" role="document">
+    <div class="content">
+      <div class="main-content-wrapper">
+        @include('partials.page-header')
+        @includeFirst(['partials.content-' . get_post_type(), 'partials.content'])
+      </div>
+    </div>
+  </div>
   @endwhile
 
   {!! get_the_posts_navigation() !!}

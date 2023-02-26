@@ -12,9 +12,9 @@ function create_post_type(): void
                 'singular_name' => __('Training', 'sage')
             ),
             'public' => true,
-            'has_archive' => true,
+            'has_archive' => false,
             'taxonomies' => array('category'),
-            'rewrite' => array('slug' => 'trainings'),
+            'rewrite' => array('slug' => __('trainings', 'sage')),
             'menu_icon' => 'dashicons-admin-site-alt',
             'show_in_rest' => true,
             'supports' => array('title', 'editor', 'author', 'thumbnail', 'excerpt'),

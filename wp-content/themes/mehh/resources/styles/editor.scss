@@ -1,6 +1,5 @@
 .edit-post-visual-editor {
-  margin-left: 40px;
-  margin-right: 40px;
+  margin: 40px;
 }
 
 .wp-block[data-type="core/widget-area"] {
@@ -11,4 +10,8 @@
 .low-wysiwyg iframe {
   height: 100px !important;
   min-height: 100px;
+}
+
+.wp-block-cover {
+  margin-bottom: 28px;
 }

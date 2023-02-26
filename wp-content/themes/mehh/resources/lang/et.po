@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Mehh Media Theme 1.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/mehh\n"
-"POT-Creation-Date: 2023-02-19T19:13:33+02:00\n"
-"PO-Revision-Date: 2023-02-19 19:17+0200\n"
+"POT-Creation-Date: 2023-02-26T15:31:13+02:00\n"
+"PO-Revision-Date: 2023-02-26 16:30+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: et\n"
@@ -81,29 +81,27 @@ msgstr ""
 
 #: components/training/training-acf.php:7
 msgid "Training settings"
-msgstr ""
+msgstr "Koolituse seaded"
 
 #: components/training/training-acf.php:11
-#: resources/views/partials/entry-meta-trainings.blade.php:3
-msgid "Date"
-msgstr "Kuupäev"
+msgid "Begin date"
+msgstr ""
 
 #: components/training/training-acf.php:29
-#: resources/views/partials/entry-meta-trainings.blade.php:10
-msgid "Price"
-msgstr "Hind"
-
-#: components/training/training-acf.php:44
-msgid "Contact info"
-msgstr "Kontakt info"
+msgid "End date"
+msgstr ""
 
 #: components/training/training.php:11
 msgid "Trainings"
-msgstr ""
+msgstr "Koolitused"
 
 #: components/training/training.php:12
 msgid "Training"
-msgstr ""
+msgstr "Koolitus"
+
+#: components/training/training.php:17
+msgid "trainings"
+msgstr "koolitused"
 
 #. Template Name of the theme
 msgid "Home"
@@ -165,6 +163,14 @@ msgstr ""
 msgid "Pages:"
 msgstr ""
 
+#: resources/views/partials/entry-meta-trainings.blade.php:3
+msgid "Date"
+msgstr "Kuupäev"
+
+#: resources/views/partials/entry-meta-trainings.blade.php:10
+msgid "Price"
+msgstr "Hind"
+
 #: resources/views/partials/entry-meta.blade.php:7
 msgid "By"
 msgstr ""
@@ -192,12 +198,12 @@ msgstr "Saada"
 #: components/training/training-list/build/index.js:1
 #: components/training/training-list/src/edit.js:52
 msgid "Training list settings"
-msgstr "Koolituse seaded"
+msgstr "Koolituse nimekirja seaded"
 
 #: components/training/training-list/build/index.js:1
 #: components/training/training-list/src/edit.js:67
 msgid "Training list"
-msgstr "Koolitus"
+msgstr "Koolituste nimekiri"
 
 #: components/accordion/build/block.json components/accordion/src/block.json
 msgctxt "block title"
@@ -223,4 +229,7 @@ msgstr ""
 #: components/training/training-list/src/block.json
 msgctxt "block title"
 msgid "Training List"
-msgstr "Koolitus"
+msgstr "Koolituste nimekiri"
+
+#~ msgid "Contact info"
+#~ msgstr "Kontakt info"
