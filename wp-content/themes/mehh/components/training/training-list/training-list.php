@@ -38,6 +38,8 @@ function training_list_dynamic_render_callback($attr)
 		'meta_key' => 'begin_date',
 		'orderby' => 'begin_date',
 		'order' => 'ASC',
+		'meta_value'   => date( "Ymd" ),
+  		'meta_compare' => '>',
 	);
 
 	$posts = get_posts( $args );

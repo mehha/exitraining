@@ -19,7 +19,7 @@ header.banner {
 
 .not-top {
   header.banner {
-    @include media-breakpoint-up(xl) {
+    @include media-breakpoint-up(lg) {
       //transform: translateY(-16px);
       border-bottom: 1px solid $gray-light;
       background-color: $white;

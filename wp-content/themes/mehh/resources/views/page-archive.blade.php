@@ -6,7 +6,15 @@
 
 @section('content')
   @php
-    $args = array('post_type' => 'trainings');
+    $args = array(
+      'post_type' => 'trainings',
+      'post_status' => 'publish',
+      'meta_key' => 'begin_date',
+      'orderby' => 'begin_date',
+      'order' => 'ASC',
+      'meta_value'   => date( "Ymd" ),
+      'meta_compare' => '>',
+    );
     $cpt_query = new WP_Query($args);
   @endphp
   <div class="wrap container" role="document">

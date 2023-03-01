@@ -3,19 +3,18 @@
     <span class="visually-hidden">
       {{ _x('Search for:', 'label', 'sage') }}
     </span>
-
-    <input
-      type="search"
-      class="px-3 py-1"
-      placeholder="{!! esc_attr_x('Search &hellip;', 'placeholder', 'sage') !!}"
-      value="{{ get_search_query() }}"
-      name="s"
-    >
   </label>
 
-  <input
-    type="search"
-    class="form-control ms-0"
-    value="{{ esc_attr_x('Search', 'submit button', 'sage') }}"
-  >
+  <div class="input-group">
+    <label for="searchField" class="visually-hidden">{{ __('Search', 'sage') }}</label>
+    <input
+      id="searchField"
+      type="search"
+      placeholder="{!! __('Search', 'sage') !!}"
+      value="{{ get_search_query() }}"
+      name="s"
+      class="form-control search-field ms-0"
+      autocomplete="off"
+    >
+  </div>
 </form>
