@@ -23,16 +23,16 @@
 if ( file_exists( dirname( __FILE__ ) . '/config-local.php' ) ) {
     include( dirname( __FILE__ ) . '/config-local.php' );
 } else {
-    define( 'DB_NAME', '' );
+    define( 'DB_NAME', 'd69095_exitraini' );
 
     /** Database username */
-    define( 'DB_USER', '' );
+    define( 'DB_USER', 'madisluik' );
 
     /** Database password */
-    define( 'DB_PASSWORD', '' );
+    define( 'DB_PASSWORD', 'L}4rD)H_b{Mz7g5y' );
 
     /** Database hostname */
-    define( 'DB_HOST', 'localhost' );
+    define( 'DB_HOST', 'd69095.mysql.zonevs.eu' );
 }
 
 /** Database charset to use in creating database tables. */
