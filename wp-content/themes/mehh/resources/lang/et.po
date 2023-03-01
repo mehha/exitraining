@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Mehh Media Theme 1.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/mehh\n"
-"POT-Creation-Date: 2023-02-26T15:31:13+02:00\n"
-"PO-Revision-Date: 2023-02-26 16:30+0200\n"
+"POT-Creation-Date: 2023-03-01T17:23:03+02:00\n"
+"PO-Revision-Date: 2023-03-01 20:16+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: et\n"
@@ -37,15 +37,19 @@ msgstr ""
 msgid "Primary Navigation"
 msgstr ""
 
-#: app/setup.php:212
+#: app/setup.php:241
 msgid "Primary"
 msgstr ""
 
-#: app/setup.php:217
+#: app/setup.php:246
+msgid "Secondary"
+msgstr ""
+
+#: app/setup.php:251
 msgid "Header"
 msgstr ""
 
-#: app/setup.php:222
+#: app/setup.php:256
 msgid "Footer"
 msgstr ""
 
@@ -75,7 +79,7 @@ msgstr "Uusimad postitused"
 msgid "Search Results for %s"
 msgstr ""
 
-#: app/View/Composers/Post.php:64
+#: app/View/Composers/Post.php:64 components/training/training.php:23
 msgid "Not Found"
 msgstr ""
 
@@ -83,33 +87,122 @@ msgstr ""
 msgid "Training settings"
 msgstr "Koolituse seaded"
 
-#: components/training/training-acf.php:11
+#: components/training/training-acf.php:11 components/training/training.php:70
 msgid "Begin date"
-msgstr ""
+msgstr "Alguskuupäev"
 
 #: components/training/training-acf.php:29
 msgid "End date"
-msgstr ""
+msgstr "Lõpukuupäev"
 
-#: components/training/training.php:11
+#: components/training/training-acf.php:47
+msgid "Price"
+msgstr "Hind"
+
+#: components/training/training-acf.php:62
+msgid "Location"
+msgstr "Asukoht"
+
+#: components/training/training.php:12 components/training/training.php:14
 msgid "Trainings"
 msgstr "Koolitused"
 
-#: components/training/training.php:12
+#: components/training/training.php:13
+#: resources/views/shortcodes/contact-form.blade.php:18
 msgid "Training"
 msgstr "Koolitus"
 
+#: components/training/training.php:15
+msgid "Parent Training"
+msgstr "Üla Koolitus"
+
+#: components/training/training.php:16
+msgid "All Trainings"
+msgstr "Kõik Koolitused"
+
 #: components/training/training.php:17
+msgid "View Training"
+msgstr "Vaata Koolitust"
+
+#: components/training/training.php:18
+msgid "Add New Training"
+msgstr "Lisa koolitus"
+
+#: components/training/training.php:19
+msgid "Add New"
+msgstr "Lisa uus"
+
+#: components/training/training.php:20
+msgid "Edit Training"
+msgstr "Muuda Koolitust"
+
+#: components/training/training.php:21
+msgid "Update Training"
+msgstr "Uuenda Koolitust"
+
+#: components/training/training.php:22
+msgid "Search Training"
+msgstr "Otsi Koolitusi"
+
+#: components/training/training.php:24
+msgid "Not found in Trash"
+msgstr ""
+
+#: components/training/training.php:29
 msgid "trainings"
 msgstr "koolitused"
 
-#. Template Name of the theme
-msgid "Home"
-msgstr ""
+#: components/training/training.php:44 components/training/training.php:54
+msgid "Types"
+msgstr "Tüübid"
+
+#: components/training/training.php:45
+msgid "Type"
+msgstr "Tüüp"
+
+#: components/training/training.php:46
+msgid "Search Types"
+msgstr "Otsi tüüpe"
+
+#: components/training/training.php:47
+msgid "All Types"
+msgstr "Kõik tüübid"
+
+#: components/training/training.php:48
+msgid "Parent Type"
+msgstr "Üla tüüp"
+
+#: components/training/training.php:49
+msgid "Parent Type:"
+msgstr "Üla tüüp:"
+
+#: components/training/training.php:50
+msgid "Edit Type"
+msgstr "Muuda tüüpi"
+
+#: components/training/training.php:51
+msgid "Update Type"
+msgstr "Uuenda tüüpi"
+
+#: components/training/training.php:52
+msgid "Add New Type"
+msgstr "Lisa uus tüüp"
+
+#: components/training/training.php:53
+msgid "New Type Name"
+msgstr "Uus tüübi nimi"
+
+#: components/training/training.php:61
+msgid "trainings-category"
+msgstr "koolituste-kategooria"
 
 #. Template Name of the theme
-msgid "Custom Template"
-msgstr ""
+msgid "Archive"
+msgstr "Arhiiv"
+
+#. Template Name of the theme
+msgid "Home"
+msgstr "Kodu"
 
 #: resources/views/404.blade.php:11
 msgid "Sorry, but the page you are trying to view does not exist."
@@ -130,7 +223,7 @@ msgctxt "submit button"
 msgid "Search"
 msgstr "Otsi"
 
-#: resources/views/index.blade.php:8 resources/views/search.blade.php:11
+#: resources/views/index.blade.php:6 resources/views/search.blade.php:11
 msgid "Sorry, no results were found."
 msgstr "Kahjuks ei leitud tulemusi."
 
@@ -158,47 +251,53 @@ msgid "Comments are closed."
 msgstr ""
 
 #: resources/views/partials/content-page.blade.php:3
-#: resources/views/partials/content-single-trainings.blade.php:16
 #: resources/views/partials/content-single.blade.php:16
 msgid "Pages:"
 msgstr ""
 
-#: resources/views/partials/entry-meta-trainings.blade.php:3
-msgid "Date"
-msgstr "Kuupäev"
+#: resources/views/partials/entry-meta-trainings-location.blade.php:6
+msgid "No location added yet"
+msgstr "Pole asukohta lisatud"
 
-#: resources/views/partials/entry-meta-trainings.blade.php:10
-msgid "Price"
-msgstr "Hind"
+#: resources/views/partials/entry-meta-trainings-price.blade.php:4
+msgid "VAT will be added!"
+msgstr "Hinnale lisandub käibemaks!"
+
+#: resources/views/partials/entry-meta-trainings-price.blade.php:7
+msgid "No price added yet"
+msgstr "Pole hinda lisatud"
 
 #: resources/views/partials/entry-meta.blade.php:7
 msgid "By"
 msgstr ""
 
-#: resources/views/shortcodes/contact-form.blade.php:18
+#: resources/views/shortcodes/contact-form.blade.php:23
+#: resources/views/shortcodes/contact-form.blade.php:24
 msgid "Name"
 msgstr "Nimi"
 
-#: resources/views/shortcodes/contact-form.blade.php:23
+#: resources/views/shortcodes/contact-form.blade.php:28
+#: resources/views/shortcodes/contact-form.blade.php:29
 msgid "Email"
 msgstr "E-mail"
 
-#: resources/views/shortcodes/contact-form.blade.php:28
+#: resources/views/shortcodes/contact-form.blade.php:33
+#: resources/views/shortcodes/contact-form.blade.php:34
 msgid "Message"
 msgstr "Sõnum"
 
-#: resources/views/shortcodes/contact-form.blade.php:48
+#: resources/views/shortcodes/contact-form.blade.php:53
 msgid "You must agree before submitting."
 msgstr "Peate nõustuma saatmiseks."
 
-#: resources/views/shortcodes/contact-form.blade.php:55
+#: resources/views/shortcodes/contact-form.blade.php:60
 msgid "Submit"
 msgstr "Saada"
 
 #: components/training/training-list/build/index.js:1
 #: components/training/training-list/src/edit.js:52
 msgid "Training list settings"
-msgstr "Koolituse nimekirja seaded"
+msgstr "Koolituste nimekirja seaded"
 
 #: components/training/training-list/build/index.js:1
 #: components/training/training-list/src/edit.js:67
@@ -230,6 +329,9 @@ msgstr ""
 msgctxt "block title"
 msgid "Training List"
 msgstr "Koolituste nimekiri"
+
+#~ msgid "Date"
+#~ msgstr "Kuupäev"
 
 #~ msgid "Contact info"
 #~ msgstr "Kontakt info"
