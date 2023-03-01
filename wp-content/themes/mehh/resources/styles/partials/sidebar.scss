@@ -1,18 +1,37 @@
 //Primary sidebar
-.has-primary-sidebar {
+.has-sidebar {
   @include media-breakpoint-up(lg) {
     .wrap {
       display: flex;
-      flex-direction: row-reverse;
 
       .content {
-        width: calc(100% - 340px);
-        padding-left: 3rem;
+        width: calc(100% - 300px);
+        padding-right: 3rem;
       }
 
-      .sidebar-primary {
-        width: 340px;
+      .sidebar {
+        width: 300px;
       }
+    }
+  }
+}
+
+.sidebar {
+  @include media-breakpoint-up(lg) {
+    position: sticky;
+    top: 90px;
+  }
+
+  .wp-block-row,
+  .wp-block-group {
+    margin-bottom: 1.5rem;
+
+    p:empty {
+      display: none;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
     }
   }
 }

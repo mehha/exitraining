@@ -3,10 +3,20 @@
     overflow: hidden;
   }
 
+  .wrap {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
   h2 {
     margin-bottom: 2rem;
     @include media-breakpoint-up(md) {
       margin-bottom: 2.5rem;
     }
   }
+}
+
+//Hide FB posts
+.cff-wrapper-ctn {
+  display: none;
 }

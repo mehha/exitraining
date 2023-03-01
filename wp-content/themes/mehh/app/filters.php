@@ -44,3 +44,7 @@ add_filter('upload_mimes', function ($mimes) {
     $mimes['eps']   = 'image/x-eps';
     return $mimes;
 });
+
+add_filter( 'acf/settings/rest_api_format', function () {
+    return 'standard';
+} );

@@ -15,6 +15,7 @@
         @includeFirst(['partials.content-single-' . get_post_type(), 'partials.content-single'])
       </div>
     </div>
+    @include('partials.sidebar-secondary')
   </div>
   @endwhile
 @endsection

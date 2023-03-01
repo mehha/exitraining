@@ -195,6 +195,35 @@ add_action('wp_head', function () { ?>
     <?php
 }, 100);
 
+//Admin styles
+add_action('login_head', function(){
+
+    echo '<style>
+    #login h1 a {
+            background: url('.get_stylesheet_directory_uri().'/public/images/logo.webp) no-repeat center top;
+            background-size: 194px auto;
+            width: 194px;
+            height: 48px;
+            margin: 0 auto 20px;
+        }
+         body { background: #fff; }
+         .button-primary {
+            background: #85C226 !important;
+            color: #fff !important;
+            border: none !important;
+            text-shadow none;
+            border-radius: 0!important;
+            -webkit-box-shadow: none !important;
+            box-shadow: none !important;
+            text-shadow: none !important;
+            padding: 8px 16px;
+          }
+          .login #login_error, .login .message, .login .success {
+            border-left: 4px 85C226 #C100F2;
+          }
+        </style>';
+} );
+
 /**
  * Register the theme sidebars.
  *
@@ -211,6 +240,11 @@ add_action('widgets_init', function () {
     register_sidebar([
         'name' => __('Primary', 'sage'),
         'id' => 'sidebar-primary'
+    ] + $config);
+
+    register_sidebar([
+        'name' => __('Secondary', 'sage'),
+        'id' => 'sidebar-secondary'
     ] + $config);
 
     register_sidebar([

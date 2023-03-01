@@ -17,12 +17,9 @@
         @includeFirst(['partials.content-' . get_post_type(), 'partials.content'])
       </div>
     </div>
+    @include('partials.sidebar')
   </div>
   @endwhile
 
   {!! get_the_posts_navigation() !!}
-@endsection
-
-@section('sidebar')
-  @include('partials.sidebar')
 @endsection

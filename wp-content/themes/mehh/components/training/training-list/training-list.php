@@ -33,7 +33,11 @@ function training_list_dynamic_render_callback($attr)
 {
 	$args = array(
 		'post_type' => 'trainings',
+		'post_status' => 'publish',
 		'numberposts'	=> $attr['numberOfItems'],
+		'meta_key' => 'begin_date',
+		'orderby' => 'begin_date',
+		'order' => 'ASC',
 	);
 
 	$posts = get_posts( $args );
@@ -42,10 +46,20 @@ function training_list_dynamic_render_callback($attr)
 		$output = '<div class="wp-block-row swiper training-list-container">';
 			$output .= '<div class="swiper-wrapper">';
 			foreach ( $posts as $p ){
+				$begin_date = get_field("begin_date", $p->ID) ? get_field("begin_date", $p->ID) : '';
+				if ($begin_date) {
+					$begin_date = DateTime::createFromFormat('Y-m-d', $begin_date)->format('d.m.Y');
+				}
+
+				$end_date = get_field("end_date", $p->ID) ? get_field("end_date", $p->ID) : '';
+				if ($end_date) {
+					$end_date = '-'.DateTime::createFromFormat('Y-m-d', $end_date)->format('d.m.Y');
+				}
+
 				$output .=
 					'<a class="d-inline-block training-list-item swiper-slide bg-white text-body" href="' . esc_url( get_permalink( $p->ID ) ) . '">
-						<div class="date">'.get_field("begin_date", $p->ID).'</div>
-						<div class="category text-primary text-uppercase">'.get_the_category($p->ID)[0]->name.'</div>
+						<div class="date">'.$begin_date.'<span>'.$end_date.'</span></div>
+						<div class="category text-primary text-uppercase">'.get_the_terms($p->ID, 'trainings_category')[0]->name.'</div>
 						<div class="title">'.$p->post_title.'</div>
 					</a>';
 			}

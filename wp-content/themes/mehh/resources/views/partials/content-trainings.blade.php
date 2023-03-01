@@ -6,7 +6,7 @@
       </a>
     </h2>
 
-    @include('partials/entry-meta')
+    @include('partials/entry-meta-trainings-date', ['left_aligned' => true])
   </header>
 
   <div class="entry-summary">

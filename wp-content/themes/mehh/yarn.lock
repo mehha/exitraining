@@ -1587,6 +1587,11 @@
   dependencies:
     "@types/node" "*"
 
+"@uvarov.frontend/vanilla-calendar@^2.4.0":
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/@uvarov.frontend/vanilla-calendar/-/vanilla-calendar-2.4.0.tgz#539fbcc906344aaf9e6bde822c1bf726222ec0be"
+  integrity sha512-xcYwtgpNrz0502BI6eWK00UEcgdggvX3PCtJFONDb9w7K7JjOEBc7YB4+wvVK14/7weWsGKYltuUTvxRrcSxBg==
+
 "@webassemblyjs/ast@1.11.1":
   version "1.11.1"
   resolved "https://registry.yarnpkg.com/@webassemblyjs/ast/-/ast-1.11.1.tgz#2bfd767eae1a6996f432ff7e8d7fc75679c0b6a7"
@@ -1876,6 +1881,11 @@ ajv@^8.0.1:
     json-schema-traverse "^1.0.0"
     require-from-string "^2.0.2"
     uri-js "^4.2.2"
+
+animejs@^3.2.1:
+  version "3.2.1"
+  resolved "https://registry.yarnpkg.com/animejs/-/animejs-3.2.1.tgz#de9fe2e792f44a777a7fdf6ae160e26604b0cdda"
+  integrity sha512-sWno3ugFryK5nhiDm/2BKeFCpZv7vzerWUcUPyAZLDhMek3+S/p418ldZJbJXo5ZUOpfm2kP2XRO4NJcULMy9A==
 
 ansi-escapes@^4.3.1:
   version "4.3.2"

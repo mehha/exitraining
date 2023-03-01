@@ -18,6 +18,16 @@
           "slug": "body",
           "color": "#1e1e2f",
           "name": "Body"
+        },
+        {
+          "slug": "green-light",
+          "color": "#e4f2cf",
+          "name": "Green light"
+        },
+        {
+          "slug": "gray-light",
+          "color": "#ececec",
+          "name": "Gray light"
         }
       ]
     }

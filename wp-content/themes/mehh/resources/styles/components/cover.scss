@@ -2,10 +2,18 @@
   > * {
     border-radius: $border-radius;
   }
+}
 
-  .wp-block-cover__inner-container h1 {
-    @include media-breakpoint-up(xl) {
-      max-width: 600px;
+.home {
+  .wp-block-cover {
+    @include media-breakpoint-down(md) {
+      --wp--preset--spacing--70: 1rem;
+    }
+
+    .wp-block-cover__inner-container h1 {
+      @include media-breakpoint-up(xl) {
+        //max-width: 600px;
+      }
     }
   }
 }

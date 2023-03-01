@@ -79,7 +79,8 @@ class ContactForm extends Composer
 
         return [
             'success_message' => $success_message,
-            'recaptcha_lang' => $this->getRecaptchaLang()
+            'recaptcha_lang' => $this->getRecaptchaLang(),
+            'post_title' => get_the_title()
         ];
     }
 

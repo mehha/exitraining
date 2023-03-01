@@ -13,19 +13,24 @@
 
   <input type="hidden" name="contact_form">
 
-  <div class="col-12 mb-4">
-    <label class="form-label fw-bold" for="full-name">{{__('Name', 'sage')}}*</label>
-    <input type="text" id="full-name" class="form-control" name="full_name" required>
+  <div class="col-12 mb-4" title="{{$post_title}}">
+    <label class="form-label fw-bold d-none" for="training">{{__('Training', 'sage')}}*</label>
+    <input type="text" id="training" class="form-control" name="training" placeholder="{{$post_title}}" disabled>
   </div>
 
   <div class="col-12 mb-4">
-    <label class="form-label fw-bold" for="email">{{__('Email', 'sage')}}*</label>
-    <input type="email" id="email" class="form-control" name="email" required>
+    <label class="form-label fw-bold d-none" for="full-name">{{__('Name', 'sage')}}*</label>
+    <input type="text" id="full-name" class="form-control" name="full_name" placeholder="{{__('Name', 'sage')}}*" required>
   </div>
 
   <div class="col-12 mb-4">
-    <label class="form-label fw-bold" for="message">{{__('Message', 'sage')}}*</label>
-    <textarea id="message" class="form-control" name="message" rows="3" required></textarea>
+    <label class="form-label fw-bold d-none" for="email">{{__('Email', 'sage')}}*</label>
+    <input type="email" id="email" class="form-control" name="email" placeholder="{{__('Email', 'sage')}}*" required>
+  </div>
+
+  <div class="col-12 mb-4">
+    <label class="form-label fw-bold d-none" for="message">{{__('Message', 'sage')}}*</label>
+    <textarea id="message" class="form-control" name="message" rows="3" placeholder="{{__('Message', 'sage')}}*" required></textarea>
   </div>
 
   @if(get_field('captcha_key', 'options'))

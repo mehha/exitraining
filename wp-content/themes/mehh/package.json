@@ -45,6 +45,8 @@
     "stylelint-config-standard-scss": "^6.1.0"
   },
   "dependencies": {
+    "@uvarov.frontend/vanilla-calendar": "^2.4.0",
+    "animejs": "^3.2.1",
     "swiper": "^9.0.5"
   }
 }

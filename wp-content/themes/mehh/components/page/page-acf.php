@@ -24,6 +24,15 @@ if (function_exists('acf_add_local_field_group')):
                 'column_width' => '',
                 'ui' => 1,
             ),
+            array(
+                'key' => 'field_adada0asdr56',
+                'label' => 'Hide sidebar',
+                'name' => 'hide_sidebar',
+                'type' => 'true_false',
+                'default_value' => 0,
+                'column_width' => '',
+                'ui' => 1,
+            ),
         ),
         'location' => array(
             array(

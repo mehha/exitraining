@@ -46,8 +46,8 @@ main {
     padding-top: 2rem;
     padding-bottom: 2rem;
     @include media-breakpoint-up(md) {
-      padding-top: 3rem;
-      padding-bottom: 3rem;
+      padding-top: 4rem;
+      padding-bottom: 4rem;
     }
   }
 }
@@ -61,6 +61,12 @@ main {
       margin-left: auto;
       margin-right: auto;
     }
+  }
+}
+
+.has-sidebar {
+  .wrap {
+    max-width: $container-narrow;
   }
 }
 

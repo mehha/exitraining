@@ -16,6 +16,7 @@
           @includeFirst(['partials.content-page', 'partials.content'])
         </div>
       </div>
+      @include('partials.sidebar')
     </div>
   @endwhile
 @endsection
