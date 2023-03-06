@@ -22,17 +22,19 @@
 /** The name of the database for WordPress */
 if ( file_exists( dirname( __FILE__ ) . '/config-local.php' ) ) {
     include( dirname( __FILE__ ) . '/config-local.php' );
+} elseif ( file_exists( dirname( __FILE__ ) . '/config-staging.php' ) ) {
+    include( dirname( __FILE__ ) . '/config-staging.php' );
 } else {
-    define( 'DB_NAME', 'd69095_exitraini' );
+    define( 'DB_NAME', '' );
 
     /** Database username */
-    define( 'DB_USER', 'madisluik' );
+    define( 'DB_USER', '' );
 
     /** Database password */
-    define( 'DB_PASSWORD', 'L}4rD)H_b{Mz7g5y' );
+    define( 'DB_PASSWORD', '' );
 
     /** Database hostname */
-    define( 'DB_HOST', 'd69095.mysql.zonevs.eu' );
+    define( 'DB_HOST', '' );
 }
 
 /** Database charset to use in creating database tables. */
