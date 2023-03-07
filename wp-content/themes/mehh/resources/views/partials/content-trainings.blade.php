@@ -6,7 +6,10 @@
       </a>
     </h2>
 
-    @include('partials/entry-meta-trainings-date', ['left_aligned' => true])
+    <div class="d-flex gap-2 items-center mb-3">
+      @include('partials/entry-meta-trainings-date', ['left_aligned' => true])
+      @include('partials/entry-meta-trainings-category')
+    </div>
   </header>
 
   <div class="entry-summary">

@@ -18,6 +18,7 @@ class Trainings extends Composer
             'end_date' => $this->getEndDate(),
             'price' => $this->getPrice(),
             'location' => $this->getLoc(),
+            'categories' => $this->getCategories(),
         ];
     }
 
@@ -53,5 +54,18 @@ class Trainings extends Composer
     {
         $loc = function_exists('get_field') ?  get_field('location') : false;
         return $loc ?: false;
+    }
+
+    public function getCategories()
+    {
+        $categories = [];
+        if (!empty(get_the_terms(get_the_ID(), 'trainings_category'))) {
+         		foreach (get_the_terms(get_the_ID(), 'trainings_category') as $el) {
+      				array_push($categories, $el->name);
+      		}
+        }
+        $categories = implode(', ', $categories);
+
+        return $categories ?: false;
     }
 }

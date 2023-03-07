@@ -14,3 +14,11 @@
     }
   }
 }
+
+.btn-search {
+  &[aria-expanded="true"] {
+    svg path {
+      stroke: $primary;
+    }
+  }
+}

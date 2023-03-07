@@ -32,6 +32,6 @@ trait FiltersViews
      */
     public function filterSearchForm($view)
     {
-        return view()->exists('forms.search') ? view('forms.search') : $view;
+        return view()->exists('forms.search', ['id' => 1]) ? view('forms.search', ['id' => 1]) : $view;
     }
 }

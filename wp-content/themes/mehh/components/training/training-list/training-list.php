@@ -58,10 +58,18 @@ function training_list_dynamic_render_callback($attr)
 					$end_date = '-'.DateTime::createFromFormat('Y-m-d', $end_date)->format('d.m.Y');
 				}
 
+				$categories = [];
+				if (!empty(get_the_terms($p->ID, 'trainings_category'))) {
+					foreach (get_the_terms($p->ID, 'trainings_category') as $el) {
+							array_push($categories, $el->name);
+					}
+				}
+				$categories = implode(', ', $categories);
+
 				$output .=
 					'<a class="d-inline-block training-list-item swiper-slide bg-white text-body" href="' . esc_url( get_permalink( $p->ID ) ) . '">
 						<div class="date">'.$begin_date.'<span>'.$end_date.'</span></div>
-						<div class="category text-primary text-uppercase">'.get_the_terms($p->ID, 'trainings_category')[0]->name.'</div>
+						<div class="category text-primary text-uppercase">'.$categories.'</div>
 						<div class="title">'.$p->post_title.'</div>
 					</a>';
 			}

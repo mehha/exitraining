@@ -3,6 +3,7 @@
     <h1 class="entry-title">
       {!! $title !!}
     </h1>
+    @include('partials/entry-meta-trainings-category')
   </header>
 
   <div class="entry-content">
