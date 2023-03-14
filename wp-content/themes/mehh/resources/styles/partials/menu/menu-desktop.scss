@@ -54,14 +54,17 @@
           position: absolute;
           top: 100%;
           left: 0;
-          background-color: $gray-100;
-          padding: 1rem 10px;
+          background-color: $white;
+          padding: 1rem 0;
+          border: 1px solid $gray-200;
           min-width: 240px;
 
           .nav-link {
             color: $body-color;
             display: inline-block;
             font-size: 14px;
+            padding-left: 1rem;
+            padding-right: 1rem;
           }
 
           .sub-menu {
