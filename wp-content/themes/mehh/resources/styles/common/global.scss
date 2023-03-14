@@ -64,6 +64,16 @@ main {
   }
 }
 
+.transparent-header {
+  main {
+    padding-top: 0;
+
+    .wrap {
+      padding-top: 0;
+    }
+  }
+}
+
 .has-sidebar {
   .wrap {
     max-width: $container-narrow;

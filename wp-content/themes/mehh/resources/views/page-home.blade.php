@@ -6,7 +6,7 @@
 
 @section('content')
   @while(have_posts()) @php(the_post())
-    <div class="wrap container" role="document">
+    <div class="wrap" role="document">
       <div class="content">
         <div class="main-content-wrapper">
           @includeFirst(['partials.content-page', 'partials.content'])

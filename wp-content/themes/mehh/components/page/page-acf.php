@@ -33,6 +33,15 @@ if (function_exists('acf_add_local_field_group')):
                 'column_width' => '',
                 'ui' => 1,
             ),
+            array(
+                'key' => 'field_adada0ascfty',
+                'label' => 'Transparent header',
+                'name' => 'transparent_header',
+                'type' => 'true_false',
+                'default_value' => 0,
+                'column_width' => '',
+                'ui' => 1,
+            ),
         ),
         'location' => array(
             array(
