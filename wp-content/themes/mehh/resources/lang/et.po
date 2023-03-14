@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Mehh Media Theme 1.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/mehh\n"
 "POT-Creation-Date: 2023-03-14T16:48:47+02:00\n"
-"PO-Revision-Date: 2023-03-14 16:50+0200\n"
+"PO-Revision-Date: 2023-03-14 16:52+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: et\n"
@@ -294,7 +294,7 @@ msgstr "E-mail"
 #: resources/views/shortcodes/contact-form.blade.php:53
 #: resources/views/shortcodes/contact-form.blade.php:54
 msgid "Add participants"
-msgstr "Lias osalejaid"
+msgstr "Lisa osalejaid"
 
 #: resources/views/shortcodes/contact-form.blade.php:58
 #: resources/views/shortcodes/contact-form.blade.php:59
