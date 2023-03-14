@@ -14,27 +14,52 @@
   <input type="hidden" name="contact_form">
 
   <div class="col-12 mb-4" title="{{$post_title}}">
-    <label class="form-label fw-bold d-none" for="training">{{__('Training', 'sage')}}*</label>
+    <label class="form-label" for="training">{{__('Training', 'sage')}}*</label>
     <input type="text" id="training" class="form-control" name="training" placeholder="{{$post_title}}" disabled>
   </div>
 
-  <div class="col-12 mb-4">
+  <div class="col-12 mb-2">
     <label class="form-label fw-bold d-none" for="full-name">{{__('Name', 'sage')}}*</label>
     <input type="text" id="full-name" class="form-control" name="full_name" placeholder="{{__('Name', 'sage')}}*" required>
   </div>
 
-  <div class="col-12 mb-4">
+  <div class="col-12 mb-2">
+    <label class="form-label fw-bold d-none" for="personal-code">{{__('Personal code', 'sage')}}*</label>
+    <input type="number" id="personal-code" class="form-control" name="personal_code" placeholder="{{__('Personal code', 'sage')}}*" required>
+  </div>
+
+  <div class="col-12 mb-2">
+    <label class="form-label fw-bold d-none" for="company-name">{{__('Company name', 'sage')}}*</label>
+    <input type="text" id="company-name" class="form-control" name="company_name" placeholder="{{__('Company name', 'sage')}}*" required>
+  </div>
+
+  <div class="col-12 mb-2">
+    <label class="form-label fw-bold d-none" for="address">{{__('Address', 'sage')}}*</label>
+    <input type="text" id="address" class="form-control" name="address" placeholder="{{__('Address', 'sage')}}*" required>
+  </div>
+
+  <div class="col-12 mb-2">
+    <label class="form-label fw-bold d-none" for="phone">{{__('Phone', 'sage')}}*</label>
+    <input type="tel" id="phone" class="form-control" name="phone" placeholder="{{__('Phone', 'sage')}}*" required>
+  </div>
+
+  <div class="col-12 mb-2">
     <label class="form-label fw-bold d-none" for="email">{{__('Email', 'sage')}}*</label>
     <input type="email" id="email" class="form-control" name="email" placeholder="{{__('Email', 'sage')}}*" required>
   </div>
 
-  <div class="col-12 mb-4">
-    <label class="form-label fw-bold d-none" for="message">{{__('Message', 'sage')}}*</label>
-    <textarea id="message" class="form-control" name="message" rows="3" placeholder="{{__('Message', 'sage')}}*" required></textarea>
+  <div class="col-12 mb-2">
+    <label class="form-label fw-bold d-none" for="participants">{{__('Add participants', 'sage')}}*</label>
+    <textarea id="participants" class="form-control" name="participants" rows="4" placeholder="{{__('Add participants', 'sage')}}*" required></textarea>
+  </div>
+
+  <div class="col-12 mb-2">
+    <label class="form-label fw-bold d-none" for="message">{{__('Notes', 'sage')}}*</label>
+    <textarea id="message" class="form-control" name="message" rows="4" placeholder="{{__('Notes', 'sage')}}*" required></textarea>
   </div>
 
   @if(get_field('captcha_key', 'options'))
-    <div class="col-12 recaptcha-container mb-4">
+    <div class="col-12 recaptcha-container mb-2">
       <div id="g-recaptcha" class="g-recaptcha" data-sitekey="{{get_field('captcha_key', 'options')}}"></div>
     </div>
   @endif
@@ -53,6 +78,16 @@
       </div>
     </div>
   @endif
+
+  <div class="col-12 mt-3">
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" id="send-copy-checkbox"
+             name="contact_form_send_copy" value="agree">
+      <label class="form-check-label" for="send-copy-checkbox">
+        {{ __('Send copy to your email.', 'sage') }}
+      </label>
+    </div>
+  </div>
 
   <input class="btn btn-primary mt-4" type="submit" id="contact-form-submit" value="{{__('Submit', 'sage')}}">
 
