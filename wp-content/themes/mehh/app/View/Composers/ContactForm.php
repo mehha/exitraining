@@ -64,7 +64,7 @@ class ContactForm extends Composer
        		if ( empty( $validation_messages ) ) {
 
        			$mail    = get_field('contact_form_recipient', 'options') ? get_field('contact_form_recipient', 'options') : get_option( 'admin_email' );
-       			$subject = 'Registreerimine kursusele';
+       			$subject = 'Registreerimine koolitusele';
        			$subject_copy = 'Registreerimise koopia email';
        			$message = 'Koolitus: '.$training.'<br>Saatja: '.$full_name.'<br>Kliendi email: '.$email.'<br>Isikukood: '.
                     $personal_code.'<br>Ettevõte: '.$company_name.'<br>Aaadress: '.$address.'<br>Telefon: '.$phone.'<br>Osalejad: '.$participants.

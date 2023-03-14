@@ -15,7 +15,7 @@
 
   <div class="col-12 mb-4" title="{{$post_title}}">
     <label class="form-label" for="training">{{__('Training', 'sage')}}*</label>
-    <input type="text" id="training" class="form-control" name="training" placeholder="{{$post_title}}" disabled>
+    <input type="text" id="training" class="form-control" name="training" value="{{$post_title}}" placeholder="{{$post_title}}" disabled>
   </div>
 
   <div class="col-12 mb-2">
