@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Mehh Media Theme 1.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/mehh\n"
-"POT-Creation-Date: 2023-03-01T17:23:03+02:00\n"
-"PO-Revision-Date: 2023-03-01 20:16+0200\n"
+"POT-Creation-Date: 2023-03-14T16:48:47+02:00\n"
+"PO-Revision-Date: 2023-03-14 16:50+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: et\n"
@@ -53,19 +53,19 @@ msgstr ""
 msgid "Footer"
 msgstr ""
 
-#: app/View/Composers/ContactForm.php:43
+#: app/View/Composers/ContactForm.php:51
 msgid "Please enter a valid name."
 msgstr ""
 
-#: app/View/Composers/ContactForm.php:48
+#: app/View/Composers/ContactForm.php:56
 msgid "Please enter a valid email address."
 msgstr ""
 
-#: app/View/Composers/ContactForm.php:52
+#: app/View/Composers/ContactForm.php:60
 msgid "Please enter a valid message."
 msgstr ""
 
-#: app/View/Composers/ContactForm.php:65
+#: app/View/Composers/ContactForm.php:81
 #: resources/views/shortcodes/contact-form.blade.php:6
 msgid "Your message has been successfully sent."
 msgstr "Sõnum on edukalt saadetud."
@@ -213,13 +213,11 @@ msgctxt "label"
 msgid "Search for:"
 msgstr "Otsi:"
 
-#: resources/views/forms/search.blade.php:11
-msgctxt "placeholder"
-msgid "Search &hellip;"
-msgstr "Otsi &hellip;"
-
-#: resources/views/forms/search.blade.php:20
-msgctxt "submit button"
+#: resources/views/forms/search.blade.php:10
+#: resources/views/forms/search.blade.php:14
+#, fuzzy
+#| msgctxt "submit button"
+#| msgid "Search"
 msgid "Search"
 msgstr "Otsi"
 
@@ -253,19 +251,11 @@ msgstr ""
 #: resources/views/partials/content-page.blade.php:3
 #: resources/views/partials/content-single.blade.php:16
 msgid "Pages:"
-msgstr ""
-
-#: resources/views/partials/entry-meta-trainings-location.blade.php:6
-msgid "No location added yet"
-msgstr "Pole asukohta lisatud"
+msgstr "Lehed:"
 
 #: resources/views/partials/entry-meta-trainings-price.blade.php:4
 msgid "VAT will be added!"
 msgstr "Hinnale lisandub käibemaks!"
-
-#: resources/views/partials/entry-meta-trainings-price.blade.php:7
-msgid "No price added yet"
-msgstr "Pole hinda lisatud"
 
 #: resources/views/partials/entry-meta.blade.php:7
 msgid "By"
@@ -278,26 +268,55 @@ msgstr "Nimi"
 
 #: resources/views/shortcodes/contact-form.blade.php:28
 #: resources/views/shortcodes/contact-form.blade.php:29
-msgid "Email"
-msgstr "E-mail"
+msgid "Personal code"
+msgstr "Isikukood"
 
 #: resources/views/shortcodes/contact-form.blade.php:33
 #: resources/views/shortcodes/contact-form.blade.php:34
-msgid "Message"
-msgstr "Sõnum"
+msgid "Company name"
+msgstr "Ettevõtte nimi"
+
+#: resources/views/shortcodes/contact-form.blade.php:38
+#: resources/views/shortcodes/contact-form.blade.php:39
+msgid "Address"
+msgstr "Aadress"
+
+#: resources/views/shortcodes/contact-form.blade.php:43
+#: resources/views/shortcodes/contact-form.blade.php:44
+msgid "Phone"
+msgstr "Telefon"
+
+#: resources/views/shortcodes/contact-form.blade.php:48
+#: resources/views/shortcodes/contact-form.blade.php:49
+msgid "Email"
+msgstr "E-mail"
 
 #: resources/views/shortcodes/contact-form.blade.php:53
+#: resources/views/shortcodes/contact-form.blade.php:54
+msgid "Add participants"
+msgstr "Lias osalejaid"
+
+#: resources/views/shortcodes/contact-form.blade.php:58
+#: resources/views/shortcodes/contact-form.blade.php:59
+msgid "Notes"
+msgstr "Märkused"
+
+#: resources/views/shortcodes/contact-form.blade.php:78
 msgid "You must agree before submitting."
 msgstr "Peate nõustuma saatmiseks."
 
-#: resources/views/shortcodes/contact-form.blade.php:60
+#: resources/views/shortcodes/contact-form.blade.php:90
+msgid "Send copy to your email."
+msgstr "Saada koopia oma emailile."
+
+#: resources/views/shortcodes/contact-form.blade.php:96
 msgid "Submit"
 msgstr "Saada"
 
 #: components/training/training-list/build/index.js:1
 #: components/training/training-list/src/edit.js:52
 msgid "Training list settings"
-msgstr "Koolituste nimekirja seaded"
+msgstr "Koolituse nimekirja seaded"
 
 #: components/training/training-list/build/index.js:1
 #: components/training/training-list/src/edit.js:67
@@ -329,6 +348,19 @@ msgstr ""
 msgctxt "block title"
 msgid "Training List"
 msgstr "Koolituste nimekiri"
+
+#~ msgctxt "placeholder"
+#~ msgid "Search &hellip;"
+#~ msgstr "Otsi &hellip;"
+
+#~ msgid "No location added yet"
+#~ msgstr "Pole asukohta lisatud"
+
+#~ msgid "No price added yet"
+#~ msgstr "Pole hinda lisatud"
+
+#~ msgid "Message"
+#~ msgstr "Sõnum"
 
 #~ msgid "Date"
 #~ msgstr "Kuupäev"

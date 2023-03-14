@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2023-03-01T17:23:03+02:00\n"
+"POT-Creation-Date: 2023-03-14T16:48:47+02:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.7.1\n"
 
@@ -53,19 +53,19 @@ msgstr ""
 msgid "Footer"
 msgstr ""
 
-#: app/View/Composers/ContactForm.php:43
+#: app/View/Composers/ContactForm.php:51
 msgid "Please enter a valid name."
 msgstr ""
 
-#: app/View/Composers/ContactForm.php:48
+#: app/View/Composers/ContactForm.php:56
 msgid "Please enter a valid email address."
 msgstr ""
 
-#: app/View/Composers/ContactForm.php:52
+#: app/View/Composers/ContactForm.php:60
 msgid "Please enter a valid message."
 msgstr ""
 
-#: app/View/Composers/ContactForm.php:65
+#: app/View/Composers/ContactForm.php:81
 #: resources/views/shortcodes/contact-form.blade.php:6
 msgid "Your message has been successfully sent."
 msgstr ""
@@ -217,13 +217,8 @@ msgctxt "label"
 msgid "Search for:"
 msgstr ""
 
-#: resources/views/forms/search.blade.php:11
-msgctxt "placeholder"
-msgid "Search &hellip;"
-msgstr ""
-
-#: resources/views/forms/search.blade.php:20
-msgctxt "submit button"
+#: resources/views/forms/search.blade.php:10
+#: resources/views/forms/search.blade.php:14
 msgid "Search"
 msgstr ""
 
@@ -260,16 +255,8 @@ msgstr ""
 msgid "Pages:"
 msgstr ""
 
-#: resources/views/partials/entry-meta-trainings-location.blade.php:6
-msgid "No location added yet"
-msgstr ""
-
 #: resources/views/partials/entry-meta-trainings-price.blade.php:4
 msgid "VAT will be added!"
-msgstr ""
-
-#: resources/views/partials/entry-meta-trainings-price.blade.php:7
-msgid "No price added yet"
 msgstr ""
 
 #: resources/views/partials/entry-meta.blade.php:7
@@ -283,19 +270,48 @@ msgstr ""
 
 #: resources/views/shortcodes/contact-form.blade.php:28
 #: resources/views/shortcodes/contact-form.blade.php:29
-msgid "Email"
+msgid "Personal code"
 msgstr ""
 
 #: resources/views/shortcodes/contact-form.blade.php:33
 #: resources/views/shortcodes/contact-form.blade.php:34
-msgid "Message"
+msgid "Company name"
+msgstr ""
+
+#: resources/views/shortcodes/contact-form.blade.php:38
+#: resources/views/shortcodes/contact-form.blade.php:39
+msgid "Address"
+msgstr ""
+
+#: resources/views/shortcodes/contact-form.blade.php:43
+#: resources/views/shortcodes/contact-form.blade.php:44
+msgid "Phone"
+msgstr ""
+
+#: resources/views/shortcodes/contact-form.blade.php:48
+#: resources/views/shortcodes/contact-form.blade.php:49
+msgid "Email"
 msgstr ""
 
 #: resources/views/shortcodes/contact-form.blade.php:53
+#: resources/views/shortcodes/contact-form.blade.php:54
+msgid "Add participants"
+msgstr ""
+
+#: resources/views/shortcodes/contact-form.blade.php:58
+#: resources/views/shortcodes/contact-form.blade.php:59
+msgid "Notes"
+msgstr ""
+
+#: resources/views/shortcodes/contact-form.blade.php:78
 msgid "You must agree before submitting."
 msgstr ""
 
-#: resources/views/shortcodes/contact-form.blade.php:60
+#: resources/views/shortcodes/contact-form.blade.php:90
+msgid "Send copy to your email."
+msgstr ""
+
+#: resources/views/shortcodes/contact-form.blade.php:96
 msgid "Submit"
 msgstr ""
 

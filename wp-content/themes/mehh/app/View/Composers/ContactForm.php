@@ -34,6 +34,7 @@ class ContactForm extends Composer
        	if ( isset( $_POST['contact_form'] ) ) {
 
        		//Sanitize the data
+       		$training = isset( $_POST['training'] ) ? sanitize_text_field( $_POST['training'] ) : '';
        		$full_name = isset( $_POST['full_name'] ) ? sanitize_text_field( $_POST['full_name'] ) : '';
        		$personal_code = isset( $_POST['personal_code'] ) ? sanitize_text_field( $_POST['personal_code'] ) : '';
        		$company_name = isset( $_POST['company_name'] ) ? sanitize_text_field( $_POST['company_name'] ) : '';
@@ -63,17 +64,18 @@ class ContactForm extends Composer
        		if ( empty( $validation_messages ) ) {
 
        			$mail    = get_field('contact_form_recipient', 'options') ? get_field('contact_form_recipient', 'options') : get_option( 'admin_email' );
-       			$subject = 'Uus sõnum kodulehelt';
-       			$message = 'Saatja: '.$full_name.'<br>Kliendi email: '.$email.'<br>Isikukood: '.
+       			$subject = 'Registreerimine kursusele';
+       			$subject_copy = 'Registreerimise koopia email';
+       			$message = 'Koolitus: '.$training.'<br>Saatja: '.$full_name.'<br>Kliendi email: '.$email.'<br>Isikukood: '.
                     $personal_code.'<br>Ettevõte: '.$company_name.'<br>Aaadress: '.$address.'<br>Telefon: '.$phone.'<br>Osalejad: '.$participants.
-                    'Märkused: '.$message;
+                    '<br>Märkused: '.$message;
 
                 $headers = array('Content-Type: text/html; charset=UTF-8');
 
        			wp_mail( $mail, $subject, $message, $headers );
 
                 if ($send_copy) {
-                    wp_mail( $email, $subject, $message, $headers );
+                    wp_mail( $email, $subject_copy, $message, $headers );
                 }
 
        			$success_message = esc_html__( 'Your message has been successfully sent.', 'sage' );
