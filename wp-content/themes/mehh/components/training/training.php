@@ -1,7 +1,7 @@
 <?php
 
 require_once 'training-acf.php';
-require_once 'training-shortcode.php';
+//require_once 'training-shortcode.php';
 require_once 'training-list/training-list.php';
 
 function create_post_type(): void
