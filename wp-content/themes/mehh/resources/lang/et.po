@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Mehh Media Theme 1.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/mehh\n"
 "POT-Creation-Date: 2023-03-14T16:48:47+02:00\n"
-"PO-Revision-Date: 2023-03-14 16:52+0200\n"
+"PO-Revision-Date: 2023-03-14 22:29+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: et\n"
@@ -77,7 +77,7 @@ msgstr "Uusimad postitused"
 #. translators: %s is replaced with the search query
 #: app/View/Composers/Post.php:58
 msgid "Search Results for %s"
-msgstr ""
+msgstr "Otsingutulemused %s"
 
 #: app/View/Composers/Post.php:64 components/training/training.php:23
 msgid "Not Found"
@@ -215,9 +215,6 @@ msgstr "Otsi:"
 
 #: resources/views/forms/search.blade.php:10
 #: resources/views/forms/search.blade.php:14
-#, fuzzy
-#| msgctxt "submit button"
-#| msgid "Search"
 msgid "Search"
 msgstr "Otsi"
 
