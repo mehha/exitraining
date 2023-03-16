@@ -21,8 +21,8 @@
   <div class="col-12 mb-3">
     <label class="form-label d-none" for="date">{{__('Date', 'sage')}}*</label>
     <input type="text" id="date" class="form-control" name="date"
-           value="@if(isset($end_date) && $end_date) {{$start_date}} @endif @if(isset($end_date) && $end_date) - {{$end_date}} @endif"
-           placeholder="@if(isset($end_date) && $end_date) {{$start_date}} @endif @if(isset($end_date) && $end_date) - {{$end_date}} @endif"
+           value="@if(isset($start_date) && $start_date) {{$start_date}} @endif @if(isset($end_date) && $end_date) - {{$end_date}} @endif"
+           placeholder="@if(isset($start_date) && $start_date) {{$start_date}} @endif @if(isset($end_date) && $end_date) - {{$end_date}} @endif"
            readonly
     >
   </div>
