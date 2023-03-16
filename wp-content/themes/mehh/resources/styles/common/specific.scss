@@ -8,6 +8,12 @@
     padding-bottom: 1rem;
   }
 
+  .navbar-brand {
+    @include media-breakpoint-up(lg) {
+      display: none;
+    }
+  }
+
   h2 {
     margin-bottom: 2rem;
     @include media-breakpoint-up(md) {
