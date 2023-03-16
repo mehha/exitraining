@@ -35,6 +35,7 @@ class ContactForm extends Composer
 
        		//Sanitize the data
        		$training = isset( $_POST['training'] ) ? sanitize_text_field( $_POST['training'] ) : '';
+       		$date = isset( $_POST['date'] ) ? sanitize_text_field( $_POST['date'] ) : '';
        		$full_name = isset( $_POST['full_name'] ) ? sanitize_text_field( $_POST['full_name'] ) : '';
        		$personal_code = isset( $_POST['personal_code'] ) ? sanitize_text_field( $_POST['personal_code'] ) : '';
        		$company_name = isset( $_POST['company_name'] ) ? sanitize_text_field( $_POST['company_name'] ) : '';
@@ -66,7 +67,7 @@ class ContactForm extends Composer
        			$mail    = get_field('contact_form_recipient', 'options') ? get_field('contact_form_recipient', 'options') : get_option( 'admin_email' );
        			$subject = 'Registreerimine koolitusele';
        			$subject_copy = 'Registreerimise koopia email';
-       			$message = 'Koolitus: '.$training.'<br>Saatja: '.$full_name.'<br>Kliendi email: '.$email.'<br>Isikukood: '.
+       			$message = 'Koolitus: '.$training.'<br>Kuupäev: '.$date.'<br>Saatja: '.$full_name.'<br>Kliendi email: '.$email.'<br>Isikukood: '.
                     $personal_code.'<br>Ettevõte: '.$company_name.'<br>Aaadress: '.$address.'<br>Telefon: '.$phone.'<br>Osalejad: '.$participants.
                     '<br>Märkused: '.$message;
 

@@ -9,6 +9,7 @@ class Trainings extends Composer
 {
     protected static $views = [
         'partials.entry-meta-*',
+        'shortcodes.contact-form',
     ];
 
     public function with()

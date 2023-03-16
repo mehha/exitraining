@@ -13,9 +13,18 @@
 
   <input type="hidden" name="contact_form">
 
-  <div class="col-12 mb-4" title="{{$post_title}}">
+  <div class="col-12 mb-2" title="{{$post_title}}">
     <label class="form-label" for="training">{{__('Training', 'sage')}}*</label>
-    <input type="text" id="training" class="form-control" name="training" value="{{$post_title}}" placeholder="{{$post_title}}" disabled>
+    <input type="text" id="training" class="form-control" name="training" value="{{$post_title}}" placeholder="{{$post_title}}" readonly>
+  </div>
+
+  <div class="col-12 mb-3">
+    <label class="form-label d-none" for="date">{{__('Date', 'sage')}}*</label>
+    <input type="text" id="date" class="form-control" name="date"
+           value="@if(isset($end_date) && $end_date) {{$start_date}} @endif @if(isset($end_date) && $end_date) - {{$end_date}} @endif"
+           placeholder="@if(isset($end_date) && $end_date) {{$start_date}} @endif @if(isset($end_date) && $end_date) - {{$end_date}} @endif"
+           readonly
+    >
   </div>
 
   <div class="col-12 mb-2">

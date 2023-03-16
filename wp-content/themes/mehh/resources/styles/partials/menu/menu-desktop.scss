@@ -23,9 +23,9 @@
         &::after {
           content: "";
           position: absolute;
-          bottom: 4px;
-          left: 1rem;
-          right: 1rem;
+          bottom: 6px;
+          left: 20px;
+          right: 20px;
           height: 1px;
           width: 0;
           background: $gray-dark;
@@ -34,7 +34,7 @@
 
         @include hover-focus-active {
           &::after {
-            width: calc(100% - 2rem);
+            width: calc(100% - 40px);
           }
         }
       }
@@ -63,8 +63,8 @@
             color: $body-color;
             display: inline-block;
             font-size: 14px;
-            padding-left: 1rem;
-            padding-right: 1rem;
+            padding-left: 20px;
+            padding-right: 20px;
           }
 
           .sub-menu {
