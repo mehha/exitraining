@@ -3,6 +3,14 @@
   margin-bottom: 4rem;
 }
 
+.entry-content {
+  .wp-block-row,
+  .wp-block-group {
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
+  }
+}
+
 .wp-block-rounded-images {
   img {
     border-radius: $border-radius;
