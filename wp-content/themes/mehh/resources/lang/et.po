@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Mehh Media Theme 1.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/mehh\n"
-"POT-Creation-Date: 2023-03-14T16:48:47+02:00\n"
-"PO-Revision-Date: 2023-03-14 22:29+0200\n"
+"POT-Creation-Date: 2023-03-18T19:09:20+02:00\n"
+"PO-Revision-Date: 2023-03-18 19:12+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: et\n"
@@ -33,39 +33,39 @@ msgstr ""
 msgid "Continued"
 msgstr ""
 
-#: app/setup.php:74
+#: app/setup.php:80
 msgid "Primary Navigation"
 msgstr ""
 
-#: app/setup.php:241
+#: app/setup.php:247
 msgid "Primary"
 msgstr ""
 
-#: app/setup.php:246
+#: app/setup.php:252
 msgid "Secondary"
 msgstr ""
 
-#: app/setup.php:251
+#: app/setup.php:257
 msgid "Header"
 msgstr ""
 
-#: app/setup.php:256
+#: app/setup.php:262
 msgid "Footer"
 msgstr ""
 
-#: app/View/Composers/ContactForm.php:51
+#: app/View/Composers/ContactForm.php:52
 msgid "Please enter a valid name."
 msgstr ""
 
-#: app/View/Composers/ContactForm.php:56
+#: app/View/Composers/ContactForm.php:57
 msgid "Please enter a valid email address."
 msgstr ""
 
-#: app/View/Composers/ContactForm.php:60
+#: app/View/Composers/ContactForm.php:61
 msgid "Please enter a valid message."
 msgstr ""
 
-#: app/View/Composers/ContactForm.php:81
+#: app/View/Composers/ContactForm.php:82
 #: resources/views/shortcodes/contact-form.blade.php:6
 msgid "Your message has been successfully sent."
 msgstr "Sõnum on edukalt saadetud."
@@ -80,6 +80,7 @@ msgid "Search Results for %s"
 msgstr "Otsingutulemused %s"
 
 #: app/View/Composers/Post.php:64 components/training/training.php:23
+#: components/training/training.php:78
 msgid "Not Found"
 msgstr ""
 
@@ -87,7 +88,7 @@ msgstr ""
 msgid "Training settings"
 msgstr "Koolituse seaded"
 
-#: components/training/training-acf.php:11 components/training/training.php:70
+#: components/training/training-acf.php:11 components/training/training.php:102
 msgid "Begin date"
 msgstr "Alguskuupäev"
 
@@ -102,6 +103,10 @@ msgstr "Hind"
 #: components/training/training-acf.php:62
 msgid "Location"
 msgstr "Asukoht"
+
+#: components/training/training-acf.php:77
+msgid "Select trainer"
+msgstr "Vali koolitaja"
 
 #: components/training/training.php:12 components/training/training.php:14
 msgid "Trainings"
@@ -128,7 +133,7 @@ msgstr "Vaata Koolitust"
 msgid "Add New Training"
 msgstr "Lisa koolitus"
 
-#: components/training/training.php:19
+#: components/training/training.php:19 components/training/training.php:74
 msgid "Add New"
 msgstr "Lisa uus"
 
@@ -144,7 +149,7 @@ msgstr "Uuenda Koolitust"
 msgid "Search Training"
 msgstr "Otsi Koolitusi"
 
-#: components/training/training.php:24
+#: components/training/training.php:24 components/training/training.php:79
 msgid "Not found in Trash"
 msgstr ""
 
@@ -195,6 +200,47 @@ msgstr "Uus tüübi nimi"
 #: components/training/training.php:61
 msgid "trainings-category"
 msgstr "koolituste-kategooria"
+
+#: components/training/training.php:67 components/training/training.php:69
+msgid "Trainers"
+msgstr "Koolitajad"
+
+#: components/training/training.php:68
+#: resources/views/partials/entry-meta-trainings-trainer.blade.php:3
+msgid "Trainer"
+msgstr "Koolitaja"
+
+#: components/training/training.php:70
+msgid "Parent Trainer"
+msgstr "Üla koolitaja"
+
+#: components/training/training.php:71
+msgid "All Trainers"
+msgstr "Kõik koolitajad"
+
+#: components/training/training.php:72
+msgid "View Trainer"
+msgstr "Vaata koolitajat"
+
+#: components/training/training.php:73
+msgid "Add New Trainer"
+msgstr "Lisa koolitaja"
+
+#: components/training/training.php:75
+msgid "Edit Trainer"
+msgstr "Muuda koolitajat"
+
+#: components/training/training.php:76
+msgid "Update Trainer"
+msgstr "Uuenda koolitajat"
+
+#: components/training/training.php:77
+msgid "Search Trainer"
+msgstr "Otsi koolitajaid"
+
+#: components/training/training.php:83
+msgid "trainers"
+msgstr "koolitajad"
 
 #. Template Name of the theme
 msgid "Archive"
@@ -259,54 +305,58 @@ msgid "By"
 msgstr ""
 
 #: resources/views/shortcodes/contact-form.blade.php:23
-#: resources/views/shortcodes/contact-form.blade.php:24
+msgid "Date"
+msgstr "Kuupäev"
+
+#: resources/views/shortcodes/contact-form.blade.php:32
+#: resources/views/shortcodes/contact-form.blade.php:33
 msgid "Name"
 msgstr "Nimi"
 
-#: resources/views/shortcodes/contact-form.blade.php:28
-#: resources/views/shortcodes/contact-form.blade.php:29
+#: resources/views/shortcodes/contact-form.blade.php:37
+#: resources/views/shortcodes/contact-form.blade.php:38
 msgid "Personal code"
 msgstr "Isikukood"
 
-#: resources/views/shortcodes/contact-form.blade.php:33
-#: resources/views/shortcodes/contact-form.blade.php:34
+#: resources/views/shortcodes/contact-form.blade.php:42
+#: resources/views/shortcodes/contact-form.blade.php:43
 msgid "Company name"
 msgstr "Ettevõtte nimi"
 
-#: resources/views/shortcodes/contact-form.blade.php:38
-#: resources/views/shortcodes/contact-form.blade.php:39
+#: resources/views/shortcodes/contact-form.blade.php:47
+#: resources/views/shortcodes/contact-form.blade.php:48
 msgid "Address"
 msgstr "Aadress"
 
-#: resources/views/shortcodes/contact-form.blade.php:43
-#: resources/views/shortcodes/contact-form.blade.php:44
+#: resources/views/shortcodes/contact-form.blade.php:52
+#: resources/views/shortcodes/contact-form.blade.php:53
 msgid "Phone"
 msgstr "Telefon"
 
-#: resources/views/shortcodes/contact-form.blade.php:48
-#: resources/views/shortcodes/contact-form.blade.php:49
+#: resources/views/shortcodes/contact-form.blade.php:57
+#: resources/views/shortcodes/contact-form.blade.php:58
 msgid "Email"
 msgstr "E-mail"
 
-#: resources/views/shortcodes/contact-form.blade.php:53
-#: resources/views/shortcodes/contact-form.blade.php:54
+#: resources/views/shortcodes/contact-form.blade.php:62
+#: resources/views/shortcodes/contact-form.blade.php:63
 msgid "Add participants"
 msgstr "Lisa osalejaid"
 
-#: resources/views/shortcodes/contact-form.blade.php:58
-#: resources/views/shortcodes/contact-form.blade.php:59
+#: resources/views/shortcodes/contact-form.blade.php:67
+#: resources/views/shortcodes/contact-form.blade.php:68
 msgid "Notes"
 msgstr "Märkused"
 
-#: resources/views/shortcodes/contact-form.blade.php:78
+#: resources/views/shortcodes/contact-form.blade.php:87
 msgid "You must agree before submitting."
 msgstr "Peate nõustuma saatmiseks."
 
-#: resources/views/shortcodes/contact-form.blade.php:90
+#: resources/views/shortcodes/contact-form.blade.php:99
 msgid "Send copy to your email."
 msgstr "Saada koopia oma emailile."
 
-#: resources/views/shortcodes/contact-form.blade.php:96
+#: resources/views/shortcodes/contact-form.blade.php:105
 msgid "Submit"
 msgstr "Saada"
 
@@ -358,9 +408,6 @@ msgstr "Koolituste nimekiri"
 
 #~ msgid "Message"
 #~ msgstr "Sõnum"
-
-#~ msgid "Date"
-#~ msgstr "Kuupäev"
 
 #~ msgid "Contact info"
 #~ msgstr "Kontakt info"
