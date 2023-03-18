@@ -1,7 +1,16 @@
 .page-template-page-archive {
   .main-content-wrapper {
+    .top-image {
+      margin-bottom: 1rem;
+
+      @include media-breakpoint-up(sm) {
+        flex: 1 0 150px;
+        margin-bottom: 0;
+      }
+    }
+
     article {
-      margin-bottom: 2rem;
+      margin-bottom: 3rem;
 
       .entry-title {
         margin-bottom: 10px;

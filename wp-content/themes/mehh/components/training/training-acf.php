@@ -72,6 +72,29 @@ if (function_exists('acf_add_local_field_group')):
                     'id' => '',
                 ),
             ),
+            array(
+                'key' => 'field_641334687f42d',
+                'label' => __('Select trainer', 'sage'),
+                'name' => 'select_trainer',
+                'aria-label' => '',
+                'type' => 'post_object',
+                'instructions' => '',
+                'required' => 0,
+                'conditional_logic' => 0,
+                'wrapper' => array(
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'post_type' => array(
+                    0 => 'trainers',
+                ),
+                'taxonomy' => '',
+                'return_format' => 'object',
+                'multiple' => 0,
+                'allow_null' => 0,
+                'ui' => 1,
+            ),
         ),
         'location' => array(
             array(

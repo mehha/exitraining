@@ -23,12 +23,14 @@
         @include('partials.page-header')
 
         @while($cpt_query->have_posts()) @php($cpt_query->the_post())
-          @if(has_post_thumbnail())
-            <div class="top-image">
-              {!! get_the_post_thumbnail(null,'top_image') !!}
-            </div>
-          @endif
-          @includeFirst(['partials.content-trainings', 'partials.content'])
+          <div class="article-container d-sm-flex gap-3">
+            @if(has_post_thumbnail())
+              <div class="top-image">
+                {!! get_the_post_thumbnail(null, 'thumbnail', ['class' => 'rounded']) !!}
+              </div>
+            @endif
+            @includeFirst(['partials.content-trainings', 'partials.content'])
+          </div>
         @endwhile
       </div>
     </div>

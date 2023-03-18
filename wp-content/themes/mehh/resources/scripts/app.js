@@ -16,6 +16,7 @@ import {handleSwiper} from "./components/swiper";
 import {handleCalendar} from "./components/calendar";
 import {handleAnimation} from "./components/anime";
 import {handleSearch} from "./components/search";
+import {handleFullCalendar} from "./components/full-calendar";
 
 const mountedFns = [
   handleFancybox,
@@ -26,7 +27,8 @@ const mountedFns = [
   handleSwiper,
   handleCalendar,
   handleAnimation,
-  handleSearch
+  handleSearch,
+  handleFullCalendar
 ]
 
 // Run fn-s

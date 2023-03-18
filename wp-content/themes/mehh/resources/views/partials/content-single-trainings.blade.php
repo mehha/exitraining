@@ -8,5 +8,6 @@
 
   <div class="entry-content">
     @php(the_content())
+    @include('partials/entry-meta-trainings-trainer')
   </div>
 </article>

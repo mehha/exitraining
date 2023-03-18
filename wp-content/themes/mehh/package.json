@@ -45,6 +45,9 @@
     "stylelint-config-standard-scss": "^6.1.0"
   },
   "dependencies": {
+    "@fullcalendar/core": "^6.1.4",
+    "@fullcalendar/daygrid": "^6.1.4",
+    "@popperjs/core": "^2.11.6",
     "@uvarov.frontend/vanilla-calendar": "^2.4.0",
     "animejs": "^3.2.1",
     "swiper": "^9.0.5"

@@ -20,6 +20,7 @@ class Trainings extends Composer
             'price' => $this->getPrice(),
             'location' => $this->getLoc(),
             'categories' => $this->getCategories(),
+            'trainer' => $this->getTrainer(),
         ];
     }
 
@@ -68,5 +69,11 @@ class Trainings extends Composer
         $categories = implode(', ', $categories);
 
         return $categories ?: false;
+    }
+
+    public function getTrainer()
+    {
+        $trainerSelected = function_exists('get_field') ?  get_field('select_trainer') : false;
+        return $trainerSelected ?: false;
     }
 }

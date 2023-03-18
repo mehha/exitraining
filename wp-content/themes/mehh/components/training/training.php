@@ -60,6 +60,38 @@ function create_post_type(): void
         'query_var' => true,
         'rewrite' => array( 'slug' => __('trainings-category', 'sage') ),
     ));
+
+    register_post_type('trainers',
+        array(
+            'labels' => array(
+                'name' => __('Trainers', 'sage'),
+                'singular_name' => __('Trainer', 'sage'),
+                'menu_name'           => __( 'Trainers', 'sage'),
+                'parent_item_colon'   => __( 'Parent Trainer', 'sage'),
+                'all_items'           => __( 'All Trainers', 'sage'),
+                'view_item'           => __( 'View Trainer', 'sage'),
+                'add_new_item'        => __( 'Add New Trainer', 'sage'),
+                'add_new'             => __( 'Add New', 'sage'),
+                'edit_item'           => __( 'Edit Trainer', 'sage'),
+                'update_item'         => __( 'Update Trainer', 'sage'),
+                'search_items'        => __( 'Search Trainer', 'sage'),
+                'not_found'           => __( 'Not Found', 'sage'),
+                'not_found_in_trash'  => __( 'Not found in Trash', 'sage')
+            ),
+            'public' => true,
+            'has_archive' => false,
+            'rewrite' => array('slug' => __('trainers', 'sage')),
+            'menu_icon' => 'dashicons-admin-users',
+            'show_in_rest' => false,
+            'show_ui' => true,
+            'hierarchical' => false,
+            'show_in_menu' => true,
+            'show_in_nav_menus' => true,
+            'show_in_admin_bar' => true,
+            'can_export' => true,
+            'supports' => array('title', 'editor', 'thumbnail'),
+        )
+    );
 }
 
 add_action('init', 'create_post_type');

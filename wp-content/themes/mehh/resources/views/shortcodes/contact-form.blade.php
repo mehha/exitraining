@@ -77,7 +77,7 @@
     <div class="col-12">
       <div class="form-check">
         <input class="form-check-input" type="checkbox" id="contact-form-confirm-checkbox"
-               name="contact-form-confirm" value="agree" required>
+               name="contact-form-confirm" value="agree" required checked>
         <label class="form-check-label" for="contact-form-confirm-checkbox">
           {!! get_field('privacy_disclaimer', 'options') !!}
         </label>
@@ -88,10 +88,10 @@
     </div>
   @endif
 
-  <div class="col-12 mt-3">
+  <div class="col-12 mt-3 d-none">
     <div class="form-check">
       <input class="form-check-input" type="checkbox" id="send-copy-checkbox"
-             name="contact_form_send_copy" value="agree">
+             name="contact_form_send_copy" value="agree" checked>
       <label class="form-check-label" for="send-copy-checkbox">
         {{ __('Send copy to your email.', 'sage') }}
       </label>
