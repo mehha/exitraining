@@ -34,7 +34,7 @@ export default function Edit({attributes, setAttributes}) {
 	const [items, setItems] = useState(attributes.items || []);
 
 	const addRow = () => {
-		setItems([...items, {title: '', content: ''}]);
+		setItems([...items, {title: '', content: '', list: ''}]);
 	}
 
 	const deleteRow = (val, i) => {
@@ -66,6 +66,16 @@ export default function Edit({attributes, setAttributes}) {
 		});
 	}
 
+	const updateList = (val, i) => {
+		setItems(prevItems => {
+			prevItems[i].list = val
+			setAttributes({items: [...prevItems]});
+			return [
+				...prevItems,
+			]
+		});
+	}
+
 	return (
 		<div {...useBlockProps()}>
 			<Panel header="Accordion">
@@ -87,6 +97,16 @@ export default function Edit({attributes, setAttributes}) {
 									placeholder="Content"
 									value={item.content}
 									onChange={(val) => updateContent(val, i)}
+									tagName="p"
+								/>
+							</PanelRow>
+							<PanelRow>
+								<RichText
+									placeholder="List"
+									value={item.list}
+									onChange={(val) => updateList(val, i)}
+									tagName="ul"
+									multiline="li"
 								/>
 							</PanelRow>
 						</PanelBody>

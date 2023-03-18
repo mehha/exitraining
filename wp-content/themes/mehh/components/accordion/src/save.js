@@ -3,7 +3,7 @@
  * It provides all the necessary props like the class name.
  * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/#useblockprops
  */
-import {useBlockProps} from '@wordpress/block-editor';
+import {useBlockProps, RichText} from '@wordpress/block-editor';
 
 import {RawHTML} from '@wordpress/element';
 
@@ -33,9 +33,17 @@ export default function save({attributes}) {
 							<div id={`collapse-${key}`} className="accordion-collapse collapse"
 								 aria-labelledby={`heading-${key}`} data-bs-parent="#accordionModule">
 								<div className="accordion-body">
-									<RawHTML>
-										{singleItem.content}
-									</RawHTML>
+									<RichText.Content
+									  value={singleItem.content}
+									  tagName="div"
+									  multiline="p"
+									/>
+
+									<RichText.Content
+									  value={singleItem.list}
+									  tagName="ul"
+									  multiline="li"
+									/>
 								</div>
 							</div>
 						</div>

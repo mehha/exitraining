@@ -8,7 +8,7 @@
   "icon": "image-flip-vertical",
   "description": "Example block scaffolded with Create Block tool.",
   "supports": {
-    "html": false
+    "html": true
   },
   "attributes": {
     "items": {
