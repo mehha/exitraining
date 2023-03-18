@@ -35,7 +35,7 @@ export default function save({attributes}) {
 								<div className="accordion-body">
 									<RichText.Content
 									  value={singleItem.content}
-									  tagName="div"
+									  tagName="p"
 									  multiline="p"
 									/>
 
