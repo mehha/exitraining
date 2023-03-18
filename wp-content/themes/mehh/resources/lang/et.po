@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Mehh Media Theme 1.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/mehh\n"
 "POT-Creation-Date: 2023-03-18T19:09:20+02:00\n"
-"PO-Revision-Date: 2023-03-18 19:12+0200\n"
+"PO-Revision-Date: 2023-03-18 19:28+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: et\n"
@@ -31,7 +31,7 @@ msgstr ""
 
 #: app/filters.php:15
 msgid "Continued"
-msgstr ""
+msgstr "Loe edasi"
 
 #: app/setup.php:80
 msgid "Primary Navigation"
