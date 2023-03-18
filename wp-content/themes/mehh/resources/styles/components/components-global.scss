@@ -3,11 +3,13 @@
   margin-bottom: 4rem;
 }
 
-.entry-content {
-  .wp-block-row,
-  .wp-block-group {
-    margin-bottom: 2rem;
-    margin-top: 2rem;
+body:not(.page-template-page-home) {
+  .entry-content {
+    .wp-block-row,
+    .wp-block-group {
+      margin-bottom: 2rem;
+      margin-top: 2rem;
+    }
   }
 }
 
