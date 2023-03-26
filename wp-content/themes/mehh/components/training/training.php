@@ -109,3 +109,19 @@ add_action('manage_trainings_posts_custom_column', function ($column_name, $post
         echo get_field('begin_date', $post_id);
     }
 }, 20, 2);
+
+/*
+ * Modify menu active menu classes for properties
+ */
+add_filter('nav_menu_css_class', function($classes, $item, $args, $depth){
+
+    if (is_singular(array('trainings'))) {
+//        100 is page id of Koolitused page (archive)
+        if(100 == $item->object_id){
+            $classes[] = 'current-menu-item';
+        }
+    }
+
+    return $classes;
+
+}, 10, 4);
