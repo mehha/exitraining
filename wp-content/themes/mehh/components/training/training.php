@@ -111,7 +111,7 @@ add_action('manage_trainings_posts_custom_column', function ($column_name, $post
 }, 20, 2);
 
 /*
- * Modify menu active menu classes for properties
+ * Modify menu active menu classes for trainings
  */
 add_filter('nav_menu_css_class', function($classes, $item, $args, $depth){
 
