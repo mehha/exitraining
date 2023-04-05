@@ -162,6 +162,7 @@ class CFF_Shortcode_Display {
 			'cff_feed_styles' => $this->get_style_attribute( 'feed_global' ),
 			'cff_feed_attributes' => $attributes_string
 		];
+
 		return $result;
 	}
 

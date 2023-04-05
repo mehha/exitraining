@@ -4,7 +4,7 @@ Tags: Facebook, Facebook feed, Facebook posts, Facebook group, Facebook page
 Requires at least: 4.1
 Requires PHP: 5.6
 Tested up to: 6.1
-Stable tag: 4.1.7
+Stable tag: 4.1.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -262,6 +262,9 @@ The most common reason for this is that an add-on or extension you have installe
 9. It's super easy to display your Facebook feed in any page or post
 
 == Changelog ==
+= 4.1.8 =
+* Fix: Feeds with masonry layout selected would still show as a list feed.
+
 = 4.1.7 =
 * Fix: Fixed incorrect links in the plugin admin area.
 
