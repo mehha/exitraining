@@ -4,6 +4,59 @@
   //--fc-button-bg-color: #85C226;
   //--fc-button-border-color: #85C226;
 
-  max-width: 1200px;
-  margin: 0 auto;
+  .fc-dayGridMonth-view {
+    max-width: 840px;
+    margin: 0 auto;
+  }
+
+  .fc-toolbar {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(12, 1fr);
+
+    .fc-toolbar-chunk {
+      &:first-child {
+        grid-column: 1 / span 6;
+        grid-row-start: 1;
+      }
+
+      &:nth-child(2) {
+        grid-column: 7 / span 6;
+        grid-row-start: 1;
+        text-align: right;
+      }
+
+      &:last-child {
+        grid-row-start: 2;
+        grid-column: 1 / span 12;
+      }
+
+      .fc-toolbar-title {
+        font-size: 24px;
+      }
+    }
+  }
+}
+
+.month-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+
+  button {
+    line-height: 1.1;
+    background-color: var(--fc-button-hover-bg-color);
+    color: $white;
+    padding: 4px 10px;
+    font-size: 14px;
+    @include theme-transition;
+
+    @include hover-focus-active {
+      background-color: $primary;
+    }
+  }
 }

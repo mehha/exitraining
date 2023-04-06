@@ -30,7 +30,7 @@ export function handleFullCalendar() {
     fetch(baseUrl+'/wp-json/wp/v2/trainings').then(res => {
       return res.json();
     }).then(data => {
-      console.log('data', data)
+      // console.log('data', data)
       handleData(data)
       initCalendar(handleData(data))
     });
@@ -45,6 +45,12 @@ export function handleFullCalendar() {
       initialView: 'dayGridMonth',
       events: events,
       locale: etLocale,
+      contentHeight: 600,
+      headerToolbar: {
+        start: 'title',
+        center: 'today prev,next',
+        end: ''
+      },
       eventDidMount: function(info) {
         let tooltip = new Tooltip(info.el, {
           title: info.event.extendedProps.description,
@@ -52,8 +58,32 @@ export function handleFullCalendar() {
           trigger: 'hover',
           container: 'body'
         });
+      },
+      viewDidMount: function () {
+        handleMonthNav()
       }
     });
+
+    const handleMonthNav = () => {
+      const fcToolbarEl = document.querySelectorAll('.fc-toolbar-chunk')[2];
+      const newDivEl = document.createElement('div');
+      newDivEl.className = "month-nav"
+      fcToolbarEl.appendChild(newDivEl)
+
+      for (let i = 0; i < 12; i++) {
+        const monthDate = new Date(calendar.getCurrentData().currentDate.getFullYear(), calendar.getCurrentData().currentDate.getMonth() + i, 1)
+        const monthNameWithYear = calendar.formatDate(monthDate, { month: 'long', year: 'numeric' });
+        let customButton = document.createElement('button');
+        customButton.textContent = monthNameWithYear;
+        customButton.className = "border-0 rounded";
+        customButton.addEventListener('click', function() {
+          calendar.gotoDate(monthDate);
+        });
+        newDivEl.appendChild(customButton)
+      }
+    }
+
     calendar.render();
+
   }
 }

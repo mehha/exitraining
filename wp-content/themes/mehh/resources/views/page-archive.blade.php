@@ -32,6 +32,8 @@
             @includeFirst(['partials.content-trainings', 'partials.content'])
           </div>
         @endwhile
+
+        @php(wp_reset_query())
       </div>
     </div>
     @include('partials.sidebar')
