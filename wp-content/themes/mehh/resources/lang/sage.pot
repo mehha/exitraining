@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2023-03-18T19:09:20+02:00\n"
+"POT-Creation-Date: 2023-04-06T09:26:12+03:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.7.1\n"
 
@@ -299,8 +299,8 @@ msgstr ""
 msgid "Comments are closed."
 msgstr ""
 
-#: resources/views/partials/content-page.blade.php:3
-#: resources/views/partials/content-single.blade.php:16
+#: resources/views/partials/content-page.blade.php:4
+#: resources/views/partials/content-single.blade.php:17
 msgid "Pages:"
 msgstr ""
 
@@ -328,7 +328,7 @@ msgstr ""
 
 #: resources/views/shortcodes/contact-form.blade.php:42
 #: resources/views/shortcodes/contact-form.blade.php:43
-msgid "Company name"
+msgid "Company"
 msgstr ""
 
 #: resources/views/shortcodes/contact-form.blade.php:47

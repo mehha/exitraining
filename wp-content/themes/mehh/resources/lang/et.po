@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Mehh Media Theme 1.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/mehh\n"
-"POT-Creation-Date: 2023-03-18T19:09:20+02:00\n"
-"PO-Revision-Date: 2023-03-18 19:28+0200\n"
+"POT-Creation-Date: 2023-04-06T09:26:12+03:00\n"
+"PO-Revision-Date: 2023-04-06 09:26+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: et\n"
@@ -291,8 +291,8 @@ msgstr ""
 msgid "Comments are closed."
 msgstr ""
 
-#: resources/views/partials/content-page.blade.php:3
-#: resources/views/partials/content-single.blade.php:16
+#: resources/views/partials/content-page.blade.php:4
+#: resources/views/partials/content-single.blade.php:17
 msgid "Pages:"
 msgstr "Lehed:"
 
@@ -320,8 +320,8 @@ msgstr "Isikukood"
 
 #: resources/views/shortcodes/contact-form.blade.php:42
 #: resources/views/shortcodes/contact-form.blade.php:43
-msgid "Company name"
-msgstr "Ettevõtte nimi"
+msgid "Company"
+msgstr "Ettevõte"
 
 #: resources/views/shortcodes/contact-form.blade.php:47
 #: resources/views/shortcodes/contact-form.blade.php:48
@@ -362,11 +362,16 @@ msgstr "Saada"
 
 #: components/training/training-list/build/index.js:1
 #: components/training/training-list/src/edit.js:52
+#, fuzzy
+#| msgid "Training settings"
 msgid "Training list settings"
-msgstr "Koolituse nimekirja seaded"
+msgstr "Koolituse seaded"
 
 #: components/training/training-list/build/index.js:1
 #: components/training/training-list/src/edit.js:67
+#, fuzzy
+#| msgctxt "block title"
+#| msgid "Training List"
 msgid "Training list"
 msgstr "Koolituste nimekiri"
 

@@ -38,8 +38,8 @@
   </div>
 
   <div class="col-12 mb-2">
-    <label class="form-label fw-bold d-none" for="company-name">{{__('Company name', 'sage')}}*</label>
-    <input type="text" id="company-name" class="form-control" name="company_name" placeholder="{{__('Company name', 'sage')}}*" required>
+    <label class="form-label fw-bold d-none" for="company-name">{{__('Company', 'sage')}}*</label>
+    <input type="text" id="company-name" class="form-control" name="company_name" placeholder="{{__('Company', 'sage')}}*" required>
   </div>
 
   <div class="col-12 mb-2">
