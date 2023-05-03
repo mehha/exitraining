@@ -46,15 +46,20 @@ export function handleFullCalendar() {
       events: events,
       locale: etLocale,
       displayEventTime: false,
+      eventDisplay: 'block',
       contentHeight: 600,
       headerToolbar: {
         start: 'title',
         center: 'today prev,next',
         end: ''
       },
+      eventContent: function (info) {
+        let titleHtml = '<div class="fc-event-title fc-sticky">' + info.event.title + '</div>';
+        return {html: titleHtml}
+      },
       eventDidMount: function(info) {
         let tooltip = new Tooltip(info.el, {
-          title: info.event.extendedProps.description,
+          title: info.event.extendedProps.description.replace(/&#8211;/g, "–"),
           placement: 'top',
           trigger: 'hover',
           container: 'body'
