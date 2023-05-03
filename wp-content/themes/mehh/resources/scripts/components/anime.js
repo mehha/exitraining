@@ -1,7 +1,7 @@
 import anime from "animejs";
 
 export function handleAnimation() {
-  const el = document.querySelector('.animate strong')
+  const el = document.querySelector('.animate .first-part')
   const elSpan = document.querySelector('.animate .second-part')
 
   if (!el) {

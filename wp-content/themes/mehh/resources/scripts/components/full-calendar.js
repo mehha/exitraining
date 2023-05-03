@@ -18,7 +18,7 @@ export function handleFullCalendar() {
         title: single.title.rendered,
         description: single.title.rendered,
         start: single.acf.begin_date,
-        end: single.acf.end_date,
+        end: single.acf.end_date+'T12:00:00',
         url: single.link
       })
     })
@@ -45,6 +45,7 @@ export function handleFullCalendar() {
       initialView: 'dayGridMonth',
       events: events,
       locale: etLocale,
+      displayEventTime: false,
       contentHeight: 600,
       headerToolbar: {
         start: 'title',

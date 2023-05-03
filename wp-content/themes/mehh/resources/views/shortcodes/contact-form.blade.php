@@ -13,9 +13,9 @@
 
   <input type="hidden" name="contact_form">
 
-  <div class="col-12 mb-2" title="{{$post_title}}">
+  <div class="col-12 mb-2" title="{!! $post_title !!}">
     <label class="form-label" for="training">{{__('Training', 'sage')}}*</label>
-    <input type="text" id="training" class="form-control" name="training" value="{{$post_title}}" placeholder="{{$post_title}}" readonly>
+    <input type="text" id="training" class="form-control" name="training" value="{!! $post_title !!}" placeholder="{!! $post_title !!}" readonly>
   </div>
 
   <div class="col-12 mb-3">

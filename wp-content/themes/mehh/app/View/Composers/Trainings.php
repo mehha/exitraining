@@ -21,6 +21,7 @@ class Trainings extends Composer
             'location' => $this->getLoc(),
             'categories' => $this->getCategories(),
             'trainer' => $this->getTrainer(),
+            'register_info' => $this->getRegisterInfo(),
         ];
     }
 
@@ -75,5 +76,11 @@ class Trainings extends Composer
     {
         $trainerSelected = function_exists('get_field') ?  get_field('select_trainer') : false;
         return $trainerSelected ?: false;
+    }
+
+    public function getRegisterInfo()
+    {
+        $regInfo = function_exists('get_field') ?  get_field('register_info', 'options') : false;
+        return $regInfo ?: false;
     }
 }
