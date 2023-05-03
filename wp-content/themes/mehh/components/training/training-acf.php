@@ -128,7 +128,7 @@ if( function_exists('acf_add_options_page') ):
 
     acf_add_local_field_group(array (
         'key' => 'group_5besasa8c49cf56',
-        'title' => 'Training general options',
+        'title' => __('Training general options', 'sage'),
         'fields' => array (
             array (
                 'key' => 'field_5beadaadi33asvghj',

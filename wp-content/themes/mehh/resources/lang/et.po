@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Mehh Media Theme 1.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/mehh\n"
-"POT-Creation-Date: 2023-05-03T11:07:20+03:00\n"
-"PO-Revision-Date: 2023-05-03 11:09+0300\n"
+"POT-Creation-Date: 2023-05-03T11:26:31+03:00\n"
+"PO-Revision-Date: 2023-05-03 11:27+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: et\n"
@@ -110,6 +110,7 @@ msgstr "Vali koolitaja"
 
 #: components/training/training-acf.php:124
 #: components/training/training-acf.php:125
+#: components/training/training-acf.php:131
 msgid "Training general options"
 msgstr "Koolituse üldised seaded"
 
@@ -371,11 +372,16 @@ msgstr "Saada"
 
 #: components/training/training-list/build/index.js:1
 #: components/training/training-list/src/edit.js:52
+#, fuzzy
+#| msgid "Training settings"
 msgid "Training list settings"
-msgstr "Koolituse nimekirja seaded"
+msgstr "Koolituse seaded"
 
 #: components/training/training-list/build/index.js:1
 #: components/training/training-list/src/edit.js:67
+#, fuzzy
+#| msgctxt "block title"
+#| msgid "Training List"
 msgid "Training list"
 msgstr "Koolituste nimekiri"
 
