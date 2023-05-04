@@ -273,12 +273,12 @@ add_action('after_setup_theme', function () {
 //http://minusadam.test/et/wp-admin/edit-comments.php
 add_action('admin_menu', function () {
     remove_menu_page( 'edit-comments.php' );
-//    remove_menu_page( 'edit.php?post_type=acf-field-group' );
-//    remove_menu_page( 'sb-instagram-feed' );
+    remove_menu_page( 'edit.php?post_type=acf-field-group' );
+    remove_menu_page( 'sb-instagram-feed' );
 }, 1000);
 
 add_action('admin_bar_menu', function ($wp_admin_bar) {
-//    $wp_admin_bar->remove_node('updates');
+    $wp_admin_bar->remove_node('updates');
     $wp_admin_bar->remove_node('comments');
 }, 1000);
 
