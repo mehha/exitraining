@@ -98,6 +98,11 @@
     </div>
   </div>
 
+  <!-- Honeypot field -->
+  <div class="visually-hidden">
+      <input type="text" name="honeypot" tabindex="-1" autocomplete="off">
+  </div>
+
   <input class="btn btn-primary mt-4" type="submit" id="contact-form-submit" value="{{__('Submit', 'sage')}}">
 
 </form>
