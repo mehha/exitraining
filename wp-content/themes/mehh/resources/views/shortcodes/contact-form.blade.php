@@ -1,7 +1,7 @@
 <script async defer src='https://www.google.com/recaptcha/api.js?onload=CaptchaCallback&render=explicit&hl={{$recaptcha_lang}}'></script>
 
 @if($success_message)
-  <div class="alert alert-success mb-4" role="alert">
+  <div class="alert alert-secondary mb-4" role="alert">
     <div>
       {!! __('Your message has been successfully sent.', 'sage') !!}
     </div>

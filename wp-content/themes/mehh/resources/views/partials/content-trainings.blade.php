@@ -7,7 +7,7 @@
         </a>
       </h2>
 
-      <div class="d-flex gap-2 items-center mb-3">
+      <div class="d-flex flex-column flex-md-row gap-2 items-center mb-3">
         @include('partials/entry-meta-trainings-date', ['left_aligned' => true])
         @include('partials/entry-meta-trainings-category')
       </div>

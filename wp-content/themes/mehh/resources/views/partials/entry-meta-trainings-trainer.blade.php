@@ -1,5 +1,5 @@
 @if($trainer && isset($trainer))
-  <div class="mt-5">
+  <div class="mt-5 mb-4 mb-lg-0">
     <h2>{{__('Trainer', 'sage')}}</h2>
     <div class="trainer-container has-gray-light-background-color p-3 rounded">
       @if(has_post_thumbnail($trainer->ID))

@@ -2,6 +2,7 @@ import Tooltip from 'bootstrap/js/dist/tooltip';
 import dayGridPlugin from '@fullcalendar/daygrid'
 import * as FullCalendar from "@fullcalendar/core";
 import etLocale from '@fullcalendar/core/locales/et';
+import {windowWidth} from "../utilities/window-size";
 
 export function handleFullCalendar() {
   const calendarElFull = document.getElementById('full-calendar')
@@ -47,7 +48,7 @@ export function handleFullCalendar() {
       locale: etLocale,
       displayEventTime: false,
       eventDisplay: 'block',
-      contentHeight: 600,
+      contentHeight: windowWidth() < 768 ? 450 : 600,
       headerToolbar: {
         start: 'title',
         center: 'today prev,next',
