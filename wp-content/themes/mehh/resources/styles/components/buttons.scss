@@ -16,6 +16,10 @@
 }
 
 .btn-search {
+  svg path {
+    stroke: $body-color;
+  }
+
   &[aria-expanded="true"] {
     svg path {
       stroke: $primary;
