@@ -28,7 +28,7 @@ export function handleFullCalendar() {
   }
 
   try {
-    fetch(baseUrl+'/wp-json/wp/v2/trainings').then(res => {
+    fetch(baseUrl+'/wp-json/wp/v2/trainings?per_page=100').then(res => {
       return res.json();
     }).then(data => {
       // console.log('data', data)

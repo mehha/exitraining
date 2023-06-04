@@ -33,7 +33,7 @@ export function handleCalendar() {
   }
 
   try {
-    fetch(baseUrl+'/wp-json/wp/v2/trainings').then(res => {
+    fetch(baseUrl+'/wp-json/wp/v2/trainings?per_page=100').then(res => {
       return res.json();
     }).then(data => {
       handleCalendarPopups(handleData(data))
