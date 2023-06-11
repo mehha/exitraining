@@ -63,29 +63,31 @@ class ContactForm extends Composer
 
             // Check for honeypot field
             if ( isset( $_POST['honeypot'] ) && ! empty( $_POST['honeypot'] ) ) {
-                return false;
+                $validation_messages[] = esc_html__( 'Error in contact form (honeypot).', 'sage' );
             }
 
             if(!esc_attr(isset($_POST['form-type'])) || esc_attr($_POST['form-type']) != 'contact-form'){
-                return false;
+                $validation_messages[] = esc_html__( 'Error in contact form.', 'sage' );
             }
 
 //            Check time
             $time = esc_attr($_POST['time']);
             if (!is_numeric($time) || ($time + 4 > time())) {
-                return __('You have not filled out all the information required', 'sage');
+                $validation_messages[] = esc_html__( 'You have not filled out all the information required (time).', 'sage' );
             }
 
             // REFERER ERROR
             if (!check_ajax_referer('contact_nonce')) {
-                return false;
+                $validation_messages[] = esc_html__( 'check_ajax_referer error in contact form.', 'sage' );
             }
 
        		//Send an email to the WordPress administrator if there are no validation errors
        		if ( empty( $validation_messages ) ) {
 
        			$mail    = get_field('contact_form_recipient', 'options') ? get_field('contact_form_recipient', 'options') : get_option( 'admin_email' );
-       			$subject = 'Registreerimine koolitusele';
+                $emailArray = preg_split('/\s*,\s*/', $mail, -1, PREG_SPLIT_NO_EMPTY);
+
+                $subject = 'Registreerimine koolitusele';
        			$subject_copy = 'Registreerimise koopia email';
        			$message = 'Koolitus: '.$training.'<br>Kuupäev: '.$date.'<br>Saatja: '.$full_name.'<br>Kliendi email: '.$email.'<br>Isikukood: '.
                     $personal_code.'<br>Ettevõte: '.$company_name.'<br>Aaadress: '.$address.'<br>Telefon: '.$phone.'<br>Osalejad: '.$participants.
@@ -93,7 +95,9 @@ class ContactForm extends Composer
 
                 $headers = array('Content-Type: text/html; charset=UTF-8');
 
-       			wp_mail( $mail, $subject, $message, $headers );
+                foreach ($emailArray as $recipient) {
+                    wp_mail($recipient, $subject, $message, $headers);
+                }
 
                 if ($send_copy) {
                     wp_mail( $email, $subject_copy, $message, $headers );
