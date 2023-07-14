@@ -17,6 +17,7 @@ import {handleCalendar} from "./components/calendar";
 import {handleAnimation} from "./components/anime";
 import {handleSearch} from "./components/search";
 import {handleFullCalendar} from "./components/full-calendar";
+import {handleCookieBanner} from "./components/cookie_banner";
 
 const mountedFns = [
   handleFancybox,
@@ -28,7 +29,8 @@ const mountedFns = [
   handleCalendar,
   handleAnimation,
   handleSearch,
-  handleFullCalendar
+  handleFullCalendar,
+  handleCookieBanner,
 ]
 
 // Run fn-s

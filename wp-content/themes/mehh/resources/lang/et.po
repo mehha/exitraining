@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Mehh Media Theme 1.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/mehh\n"
-"POT-Creation-Date: 2023-05-03T11:26:31+03:00\n"
-"PO-Revision-Date: 2023-05-03 11:27+0300\n"
+"POT-Creation-Date: 2023-07-14T14:01:26+03:00\n"
+"PO-Revision-Date: 2023-07-14 14:03+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: et\n"
@@ -55,17 +55,37 @@ msgstr ""
 
 #: app/View/Composers/ContactForm.php:52
 msgid "Please enter a valid name."
-msgstr ""
+msgstr "Palun sisestage korrektne nimi"
 
 #: app/View/Composers/ContactForm.php:57
 msgid "Please enter a valid email address."
-msgstr ""
+msgstr "Palun sisestage korrektne e-mail"
 
 #: app/View/Composers/ContactForm.php:61
 msgid "Please enter a valid message."
+msgstr "Palun sisestage korrektne sisu"
+
+#: app/View/Composers/ContactForm.php:66
+msgid "Error in contact form (honeypot)."
 msgstr ""
 
-#: app/View/Composers/ContactForm.php:82
+#: app/View/Composers/ContactForm.php:70
+msgid "Error in contact form."
+msgstr ""
+
+#: app/View/Composers/ContactForm.php:76
+msgid "You have not filled out all the information required (time)."
+msgstr ""
+
+#: app/View/Composers/ContactForm.php:81
+msgid "check_ajax_referer error in contact form."
+msgstr ""
+
+#: app/View/Composers/ContactForm.php:108
+msgid "Captcha not clicked"
+msgstr ""
+
+#: app/View/Composers/ContactForm.php:133
 #: resources/views/shortcodes/contact-form.blade.php:6
 msgid "Your message has been successfully sent."
 msgstr "Sõnum on edukalt saadetud."
@@ -264,6 +284,18 @@ msgstr "Kodu"
 msgid "Sorry, but the page you are trying to view does not exist."
 msgstr ""
 
+#: resources/views/components/cookie-banner.blade.php:2
+msgid ""
+"This site uses cookies to improve your experience. By continuing to use this "
+"site, you consent to our use of cookies."
+msgstr ""
+"Kasutusel on küpsised Teie kogemuse parandamiseks. Lehel sirvides nõustud "
+"vajalike küpsiste kasutamisega."
+
+#: resources/views/components/cookie-banner.blade.php:3
+msgid "Accept"
+msgstr "Nõustun"
+
 #: resources/views/forms/search.blade.php:4
 msgctxt "label"
 msgid "Search for:"
@@ -358,15 +390,15 @@ msgstr "Lisa osalejaid"
 msgid "Notes"
 msgstr "Märkused"
 
-#: resources/views/shortcodes/contact-form.blade.php:87
+#: resources/views/shortcodes/contact-form.blade.php:89
 msgid "You must agree before submitting."
 msgstr "Peate nõustuma saatmiseks."
 
-#: resources/views/shortcodes/contact-form.blade.php:99
+#: resources/views/shortcodes/contact-form.blade.php:101
 msgid "Send copy to your email."
 msgstr "Saada koopia oma emailile."
 
-#: resources/views/shortcodes/contact-form.blade.php:105
+#: resources/views/shortcodes/contact-form.blade.php:112
 msgid "Submit"
 msgstr "Saada"
 
