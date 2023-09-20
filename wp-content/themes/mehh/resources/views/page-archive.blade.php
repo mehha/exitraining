@@ -14,6 +14,7 @@
       'order' => 'ASC',
       'meta_value'   => date( "Ymd" ),
       'meta_compare' => '>',
+      'posts_per_page' => -1,
     );
     $cpt_query = new WP_Query($args);
   @endphp
