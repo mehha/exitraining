@@ -1092,11 +1092,11 @@ msgstr "See ei ole vist %s fail. Enne paigaldamise jätkamist tuleb see korda te
 msgid "The date and time the preferences were updated."
 msgstr "Sätete uuendamise kuupäev ja kellaaeg."
 
-#: wp-includes/theme.php:4141
+#: wp-includes/theme.php:4104
 msgid "Whether the theme disables generated layout styles."
 msgstr "Kas teema lülitab tuletatud kujundusstiilid välja."
 
-#: wp-includes/theme.php:3951
+#: wp-includes/theme.php:3914
 msgid "Whether a theme uses block-based template parts."
 msgstr "Kas teema kasutab plokkide malliosi."
 
@@ -1294,7 +1294,7 @@ msgstr "Croni ajastuse eemaldamise viga: Objekt %1$s, veakood %2$s, veateade %3$
 msgid "Cron reschedule event error for hook: %1$s, Error code: %2$s, Error message: %3$s, Data: %4$s"
 msgstr "Croni ajastuse muutmise viga: Objekt %1$s, veakood %2$s, veateade %3$s, info: %4$s"
 
-#: wp-includes/theme.php:3944
+#: wp-includes/theme.php:3907
 msgid "Whether a theme uses block-based templates."
 msgstr "Kas teema kasutab plokipõhiseid malle."
 
@@ -4896,7 +4896,7 @@ msgstr "Kataloogide suurusi ei õnnestunud määrata."
 msgid "This password reset request originated from the IP address %s."
 msgstr "See salasõna lähtestamise palve on pärit IP aadressilt %s."
 
-#: wp-includes/theme.php:2717
+#: wp-includes/theme.php:2680
 msgid "You need to pass an array of post formats."
 msgstr "Sul tuleb postituse vormingud edastada massiivina (array)."
 
@@ -4904,11 +4904,11 @@ msgstr "Sul tuleb postituse vormingud edastada massiivina (array)."
 msgid "The handler for the route is invalid."
 msgstr "Marsruudi käsitleja on vigane."
 
-#: wp-includes/rest-api/class-wp-rest-server.php:1618
+#: wp-includes/rest-api/class-wp-rest-server.php:1625
 msgid "Could not parse the path."
 msgstr "Teekonna parsimine ebaõnnestus."
 
-#: wp-includes/rest-api/class-wp-rest-server.php:1668
+#: wp-includes/rest-api/class-wp-rest-server.php:1675
 msgid "The requested route does not support batch requests."
 msgstr "Päritud marsruut ei toeta komplektina esitatud päringuid."
 
@@ -5040,7 +5040,7 @@ msgid "Please use %s to add new schema properties."
 msgstr "Palun kasuta uute omaduste lisamiseks %s -parameetrit."
 
 #. translators: %s: prepare_callback
-#: wp-includes/theme.php:3352
+#: wp-includes/theme.php:3315
 msgid "The \"%s\" must be a callable function."
 msgstr "\"%s\" peab olema väljakutsutav funktsioon."
 
@@ -5830,44 +5830,44 @@ msgstr "Ploki nimi."
 msgid "RSS Feed"
 msgstr "RSS-voog"
 
-#: wp-includes/theme.php:4277
+#: wp-includes/theme.php:4240
 msgid "The post types that support thumbnails or true if all post types are supported."
 msgstr "Pisipilte toetavad postitusetüübid - või tõene, kui toetatakse kõiki tüüpe."
 
-#: wp-includes/theme.php:3339
+#: wp-includes/theme.php:3302
 msgid "When registering an \"object\" feature, the feature's schema must include the \"properties\" keyword."
 msgstr "Objekti registreerimisel tuleb kasutada omaduste (properties) võtmesõna."
 
-#: wp-includes/theme.php:3332
+#: wp-includes/theme.php:3295
 msgid "When registering an \"array\" feature, the feature's schema must include the \"items\" keyword."
 msgstr "Massiivi registreerimisel tuleb kasutada elementide (items) võtmesõna."
 
-#: wp-includes/theme.php:3325
+#: wp-includes/theme.php:3288
 msgid "When registering an \"array\" or \"object\" feature to show in the REST API, the feature's schema must also be defined."
 msgstr "Massiivi või objekti registreerimisel REST API-s tuleb defineerida ka omaduste komplekt (schema)."
 
-#: wp-includes/theme.php:3317
+#: wp-includes/theme.php:3280
 msgid "When registering a \"variadic\" theme feature, the \"type\" must be an \"array\"."
 msgstr "Variaatse teemaomaduse registreerimisel peab tüübiks olema massiiv (array)."
 
-#: wp-includes/theme.php:3310
+#: wp-includes/theme.php:3273
 msgid "The feature \"type\" is not valid JSON Schema type."
 msgstr "JSON-is ei saa sellist tüüpi kasutada."
 
 #. translators: %s: Theme name.
-#: wp-includes/theme.php:1013
+#: wp-includes/theme.php:976
 msgctxt "theme"
 msgid "<strong>Error:</strong> Current WordPress version does not meet minimum requirements for %s."
 msgstr "<strong>VIGA:</strong> Praegune WordPressi versioon ei täida %s miinimumnõudeid."
 
 #. translators: %s: Theme name.
-#: wp-includes/theme.php:1004
+#: wp-includes/theme.php:967
 msgctxt "theme"
 msgid "<strong>Error:</strong> Current PHP version does not meet minimum requirements for %s."
 msgstr "<strong>VIGA:</strong> Praegune PHP versioon ei täida %s miinimumnõudeid."
 
 #. translators: %s: Theme name.
-#: wp-includes/theme.php:995
+#: wp-includes/theme.php:958
 msgctxt "theme"
 msgid "<strong>Error:</strong> Current WordPress and PHP versions do not meet minimum requirements for %s."
 msgstr "<strong>VIGA:</strong> Praegused WordPressi ja PHP versioonid ei täida %s miinimumnõudeid."
@@ -6110,71 +6110,71 @@ msgstr "Piira tulemusi eri taksonoomiate suhtega."
 msgid "The \"%1$s\" taxonomy \"%2$s\" property (%3$s) conflicts with an existing property on the REST API Posts Controller. Specify a custom \"rest_base\" when registering the taxonomy to avoid this error."
 msgstr "Taksonoomia \"%1$s\" omadus \"%2$s\" (%3$s) on konfliktis REST API postitustekontrolleri mingi olemasoleva sättega. Määra taksonoomia registreerimisel sellele uus \"\"rest_base\"."
 
-#: wp-includes/theme.php:4305
+#: wp-includes/theme.php:4268
 msgid "Whether theme opts in to default WordPress block styles for viewing."
 msgstr "Kas teema kasutab vaikimisi WordPressi plokistiile."
 
-#: wp-includes/theme.php:4298
+#: wp-includes/theme.php:4261
 msgid "Whether the theme can manage the document title tag."
 msgstr "Kas dokumendi pealkirja hallatakse teema poolt."
 
-#: wp-includes/theme.php:4231
+#: wp-includes/theme.php:4194
 msgid "Allows use of HTML5 markup for search forms, comment forms, comment lists, gallery, and caption."
 msgstr "Lubab kasutada otsingu- ja kommentaarilahtrites, kommentaarinimekirjades, galeriis ja pealdistes HTML5 märgendeid."
 
-#: wp-includes/theme.php:4223
+#: wp-includes/theme.php:4186
 msgid "Whether theme opts in to the editor styles CSS wrapper."
 msgstr "Kas teema kasutab vaikimisi redaktori CSS-määranguid."
 
-#: wp-includes/theme.php:4199
+#: wp-includes/theme.php:4162
 msgid "Custom gradient presets if defined by the theme."
 msgstr "Valmis gradiendid, kui teema neid sisaldab."
 
-#: wp-includes/theme.php:4174
+#: wp-includes/theme.php:4137
 msgid "Custom font sizes if defined by the theme."
 msgstr "Kohandatud kirjasuurused, kui teema neid sisaldab."
 
-#: wp-includes/theme.php:4149
+#: wp-includes/theme.php:4112
 msgid "Custom color palette if defined by the theme."
 msgstr "Valmis värvipalett, kui see on teemas määratud."
 
-#: wp-includes/theme.php:4134
+#: wp-includes/theme.php:4097
 msgid "Whether the theme disables custom gradients."
 msgstr "Kas teema keelab valmis gradiendid."
 
-#: wp-includes/theme.php:4127
+#: wp-includes/theme.php:4090
 msgid "Whether the theme disables custom font sizes."
 msgstr "Kas teema keelab kohandatud kirjasuurused."
 
-#: wp-includes/theme.php:4120
+#: wp-includes/theme.php:4083
 msgid "Whether the theme disables custom colors."
 msgstr "Kas teema keelab kohandatud värvid."
 
-#: wp-includes/theme.php:4113
+#: wp-includes/theme.php:4076
 msgid "Whether theme opts in to the dark editor style UI."
 msgstr "Kas teema kasutab vaikimisi tumedat redaktoriliidest."
 
-#: wp-includes/theme.php:4106
+#: wp-includes/theme.php:4069
 msgid "Whether the theme enables Selective Refresh for Widgets being managed with the Customizer."
 msgstr "Kas teema lubab Kohandajas kasutada moodulite valikulist uuendamist."
 
-#: wp-includes/theme.php:4073
+#: wp-includes/theme.php:4036
 msgid "Custom logo if defined by the theme."
 msgstr "Logo, kui see on teemas määratud."
 
-#: wp-includes/theme.php:3958
+#: wp-includes/theme.php:3921
 msgid "Custom background if defined by the theme."
 msgstr "Taust, kui see on teemas määratud."
 
-#: wp-includes/theme.php:4028
+#: wp-includes/theme.php:3991
 msgid "Custom header if defined by the theme."
 msgstr "Kohandatud päis, kui see on teemas määratud."
 
-#: wp-includes/theme.php:3937
+#: wp-includes/theme.php:3900
 msgid "Whether posts and comments RSS feed links are added to head."
 msgstr "Kas lisatakse postituste ja kommentaaride RSS-voogude viited."
 
-#: wp-includes/theme.php:3930
+#: wp-includes/theme.php:3893
 msgid "Whether theme opts in to wide alignment CSS class."
 msgstr "Kas teema kasutab vaikimisi laia paigutusega CSS-määranguid."
 
@@ -7305,7 +7305,7 @@ msgstr "Postituse kontekstitunnus."
 msgid "Attributes for the block."
 msgstr "Ploki atribuudid."
 
-#: wp-includes/theme.php:4291
+#: wp-includes/theme.php:4254
 msgid "Whether the theme supports responsive embedded content."
 msgstr "Kas teema toetab kohanduvat mujalt lisatud sisu."
 
@@ -7314,7 +7314,7 @@ msgstr "Kas teema toetab kohanduvat mujalt lisatud sisu."
 msgid "%s from now"
 msgstr "%s praegusest"
 
-#: wp-includes/theme.php:4254
+#: wp-includes/theme.php:4217
 msgid "Post formats supported."
 msgstr "Toetatud postitusevormingud."
 
@@ -9651,60 +9651,60 @@ msgstr "Vigane lehemall."
 msgid "Invalid slug."
 msgstr "Vigane püsiviide."
 
-#: wp-includes/theme.php:1732
+#: wp-includes/theme.php:1695
 msgid "Video is playing."
 msgstr "Videot mängitakse."
 
-#: wp-includes/theme.php:1731
+#: wp-includes/theme.php:1694
 msgid "Video is paused."
 msgstr "Video on peatatud."
 
-#: wp-includes/theme.php:2334
+#: wp-includes/theme.php:2297
 msgctxt "Theme starter content"
 msgid "Archives"
 msgstr "Arhiiv"
 
-#: wp-includes/theme.php:2486
+#: wp-includes/theme.php:2449
 msgctxt "Theme starter content"
 msgid "This is an example of a homepage section. Homepage sections can be any page other than the homepage itself, including the page that shows your latest blog posts."
 msgstr "See on näide kodulehe sektsioonist. Need võivad olla mistahes muud lehed peale kodulehe enda, kaasa arvatud postitusteleht."
 
-#: wp-includes/theme.php:2478
+#: wp-includes/theme.php:2441
 msgctxt "Theme starter content"
 msgid "News"
 msgstr "Uudised"
 
-#: wp-includes/theme.php:2469
+#: wp-includes/theme.php:2432
 msgctxt "Theme starter content"
 msgid "This is a page with some basic contact information, such as an address and phone number. You might also try a plugin to add a contact form."
 msgstr "See leht võiks sisaldada lihtsamat kontaktinfot nagu aadress või telefoninumber.  Vastava plugina abil võid proovida ka kontaktivormi lisamist."
 
-#: wp-includes/theme.php:2461
+#: wp-includes/theme.php:2424
 msgctxt "Theme starter content"
 msgid "You might be an artist who would like to introduce yourself and your work here or maybe you are a business with a mission to describe."
 msgstr "Sa võid näiteks olla kunstnik, kes tahaks ennast ja enda töid tutvustada, või ehk ettevõtja, kes soovib enda sihte selgitada."
 
-#: wp-includes/theme.php:2453
+#: wp-includes/theme.php:2416
 msgctxt "Theme starter content"
 msgid "Welcome to your site! This is your homepage, which is what most visitors will see when they come to your site for the first time."
 msgstr "Tere tulemast! See on sinu koduleht, mida enamik kasutajaid näeb sinu veebisaiti külastades esimesena."
 
-#: wp-includes/theme.php:2364
+#: wp-includes/theme.php:2327
 msgctxt "Theme starter content"
 msgid "Recent Posts"
 msgstr "Viimased postitused"
 
-#: wp-includes/theme.php:2358
+#: wp-includes/theme.php:2321
 msgctxt "Theme starter content"
 msgid "Recent Comments"
 msgstr "Viimased kommentaarid"
 
-#: wp-includes/theme.php:2352
+#: wp-includes/theme.php:2315
 msgctxt "Theme starter content"
 msgid "Meta"
 msgstr "Meta"
 
-#: wp-includes/theme.php:2340
+#: wp-includes/theme.php:2303
 msgctxt "Theme starter content"
 msgid "Calendar"
 msgstr "Kalender"
@@ -9772,37 +9772,37 @@ msgstr "Vabandust, sul ei ole õigust menüüelemente vaadata."
 msgid "Sorry, you are not allowed to read comments without a post."
 msgstr "Vabandust, sul ei ole õigust postitusega sidumata kommentaare lugeda."
 
-#: wp-includes/theme.php:2443
+#: wp-includes/theme.php:2406
 msgctxt "Theme starter content"
 msgid "YouTube"
 msgstr "YouTube"
 
-#: wp-includes/theme.php:2431
+#: wp-includes/theme.php:2394
 msgctxt "Theme starter content"
 msgid "Pinterest"
 msgstr "Pinterest"
 
-#: wp-includes/theme.php:2427
+#: wp-includes/theme.php:2390
 msgctxt "Theme starter content"
 msgid "LinkedIn"
 msgstr "LinkedIn"
 
-#: wp-includes/theme.php:2419
+#: wp-includes/theme.php:2382
 msgctxt "Theme starter content"
 msgid "GitHub"
 msgstr "GitHub"
 
-#: wp-includes/theme.php:2415
+#: wp-includes/theme.php:2378
 msgctxt "Theme starter content"
 msgid "Foursquare"
 msgstr "Foursquare"
 
-#: wp-includes/theme.php:2326
+#: wp-includes/theme.php:2289
 msgctxt "Theme starter content"
 msgid "This may be a good place to introduce yourself and your site or include some credits."
 msgstr "See on sobiv koht enda või sinu veebisaidi tutvustamiseks või kaastöötajate tunnustamiseks."
 
-#: wp-includes/theme.php:2325
+#: wp-includes/theme.php:2288
 msgctxt "Theme starter content"
 msgid "About This Site"
 msgstr "Tutvustus"
@@ -9852,97 +9852,97 @@ msgstr "Vaheta videot"
 msgid "Choose video"
 msgstr "Vali video"
 
-#: wp-includes/theme.php:2483
+#: wp-includes/theme.php:2446
 msgctxt "Theme starter content"
 msgid "A homepage section"
 msgstr "Kodulehe sektsioon"
 
-#: wp-includes/theme.php:2466
+#: wp-includes/theme.php:2429
 msgctxt "Theme starter content"
 msgid "Contact"
 msgstr "Kontakt"
 
-#: wp-includes/theme.php:2474
+#: wp-includes/theme.php:2437
 msgctxt "Theme starter content"
 msgid "Blog"
 msgstr "Ajaveeb"
 
-#: wp-includes/theme.php:2458
+#: wp-includes/theme.php:2421
 msgctxt "Theme starter content"
 msgid "About"
 msgstr "Tutvustus"
 
-#: wp-includes/theme.php:2377 wp-includes/theme.php:2450
+#: wp-includes/theme.php:2340 wp-includes/theme.php:2413
 msgctxt "Theme starter content"
 msgid "Home"
 msgstr "Esileht"
 
-#: wp-includes/theme.php:2407
+#: wp-includes/theme.php:2370
 msgctxt "Theme starter content"
 msgid "Email"
 msgstr "E-post"
 
-#: wp-includes/theme.php:2423
+#: wp-includes/theme.php:2386
 msgctxt "Theme starter content"
 msgid "Instagram"
 msgstr "Instagram"
 
-#: wp-includes/theme.php:2435
+#: wp-includes/theme.php:2398
 msgctxt "Theme starter content"
 msgid "Twitter"
 msgstr "Twitter"
 
-#: wp-includes/theme.php:2439
+#: wp-includes/theme.php:2402
 msgctxt "Theme starter content"
 msgid "Yelp"
 msgstr "Yelp"
 
-#: wp-includes/theme.php:2411
+#: wp-includes/theme.php:2374
 msgctxt "Theme starter content"
 msgid "Facebook"
 msgstr "Facebook"
 
-#: wp-includes/theme.php:2346
+#: wp-includes/theme.php:2309
 msgctxt "Theme starter content"
 msgid "Categories"
 msgstr "Rubriigid"
 
-#: wp-includes/theme.php:2370
+#: wp-includes/theme.php:2333
 msgctxt "Theme starter content"
 msgid "Search"
 msgstr "Otsi"
 
-#: wp-includes/theme.php:2315
+#: wp-includes/theme.php:2278
 msgctxt "Theme starter content"
 msgid "Saturday &amp; Sunday: 11:00AM&ndash;3:00PM"
 msgstr "L-P: 11:00-15:00"
 
-#: wp-includes/theme.php:2313
+#: wp-includes/theme.php:2276
 msgctxt "Theme starter content"
 msgid "Hours"
 msgstr "Tööaeg"
 
-#: wp-includes/theme.php:2312
+#: wp-includes/theme.php:2275
 msgctxt "Theme starter content"
 msgid "New York, NY 10001"
 msgstr "New York, NY 10001"
 
-#: wp-includes/theme.php:2311
+#: wp-includes/theme.php:2274
 msgctxt "Theme starter content"
 msgid "123 Main Street"
 msgstr "123 Main Street"
 
-#: wp-includes/theme.php:2314
+#: wp-includes/theme.php:2277
 msgctxt "Theme starter content"
 msgid "Monday&ndash;Friday: 9:00AM&ndash;5:00PM"
 msgstr "E-R: 9.00-17.00"
 
-#: wp-includes/theme.php:2310
+#: wp-includes/theme.php:2273
 msgctxt "Theme starter content"
 msgid "Address"
 msgstr "Aadress"
 
-#: wp-includes/theme.php:2306
+#: wp-includes/theme.php:2269
 msgctxt "Theme starter content"
 msgid "Find Us"
 msgstr "Meie asukoht"
@@ -11293,11 +11293,11 @@ msgstr "Rikasteksti ala. Abiinfoks vajuta Control-Option-H."
 msgid "Use Left/Right Arrow keys to advance one second, Up/Down arrows to advance ten seconds."
 msgstr "Vasak/parem nooleklahv liiguvad edasi sekundi kaupa, üles/alla klahvid kümne sekundi jagu."
 
-#: wp-includes/script-loader.php:1079 wp-includes/theme.php:1730
+#: wp-includes/script-loader.php:1079 wp-includes/theme.php:1693
 msgid "Play"
 msgstr "Esita"
 
-#: wp-includes/script-loader.php:1080 wp-includes/theme.php:1729
+#: wp-includes/script-loader.php:1080 wp-includes/theme.php:1692
 msgid "Pause"
 msgstr "Paus"
 
@@ -12064,7 +12064,7 @@ msgstr "Vigane lühinimi: nimi on tühi."
 msgid "Invalid shortcode name: %1$s. Do not use spaces or reserved characters: %2$s"
 msgstr "Vigane lühinimi: %1$s. Ära kasuta tühikuid ega erimärke: %2$s"
 
-#: wp-includes/rest-api/class-wp-rest-server.php:1418
+#: wp-includes/rest-api/class-wp-rest-server.php:1425
 msgid "The specified namespace could not be found."
 msgstr "Valitud nimeruumi ei leitud."
 
@@ -12078,7 +12078,7 @@ msgstr "%1$s (alates versioonist %2$s; kasuta alternatiivi %3$s)"
 msgid "No route was found matching the URL and request method."
 msgstr "Sellele URLile ja päringumeetodile vastavat marsruuti ei leitud."
 
-#: wp-includes/rest-api/class-wp-rest-server.php:1741
+#: wp-includes/rest-api/class-wp-rest-server.php:1748
 msgid "The handler for the route is invalid"
 msgstr "Selle marsruudi käsitleja on vigane"
 
@@ -13042,7 +13042,7 @@ msgstr "Taksonoomiate nimedes võib olla 1 kuni 32 tähemärki."
 msgid "Could not split shared term."
 msgstr "Terminit ei saa mitmeks jagada."
 
-#: wp-includes/theme.php:3736
+#: wp-includes/theme.php:3699
 msgid "Customizer"
 msgstr "Kohandaja"
 
@@ -13241,7 +13241,7 @@ msgid "Distraction-free writing mode"
 msgstr "Vaba kirjutamise režiim"
 
 #. translators: 1: title-tag, 2: wp_loaded
-#: wp-includes/theme.php:2922
+#: wp-includes/theme.php:2885
 msgid "Theme support for %1$s should be registered before the %2$s hook."
 msgstr "%1$s toetus peab olema teemas sisse lülitatud enne %2$s kasutamist."
 
@@ -13282,7 +13282,7 @@ msgstr "Tööriba"
 msgid "The following values do not describe a valid date: month %1$s, day %2$s."
 msgstr "Päev %2$s ja kuu %1$s ei anna kokku korrektset kuupäeva."
 
-#: wp-includes/theme.php:2729
+#: wp-includes/theme.php:2692
 msgid "You need to pass an array of types."
 msgstr "Siin tuleb edastada tüübimassiiv."
 
@@ -17614,7 +17614,7 @@ msgid "Column"
 msgstr "Veerg"
 
 #: wp-includes/class-wp-editor.php:1370 wp-includes/script-loader.php:1293
-#: wp-includes/theme.php:3735 wp-admin/js/nav-menu.js:1260
+#: wp-includes/theme.php:3698 wp-admin/js/nav-menu.js:1260
 #: wp-admin/js/post.js:512 wp-admin/js/theme-plugin-editor.js:71
 #: wp-admin/js/widgets.js:98
 msgid "The changes you made will be lost if you navigate away from this page."

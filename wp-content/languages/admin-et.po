@@ -617,12 +617,12 @@ msgid "<a href=\"https://wordpress.org/documentation/article/customizer/\">Docum
 msgstr "<a href=\"https://wordpress.org/documentation/article/customizer/\">Dokumentatsioon kohandaja kohta</a>"
 
 #. translators: The localized WordPress download URL.
-#: wp-admin/about.php:381
+#: wp-admin/about.php:406
 msgid "https://wordpress.org/download/"
 msgstr "https://wordpress.org/download/"
 
 #. translators: %s: The major version of WordPress for this branch.
-#: wp-admin/about.php:378
+#: wp-admin/about.php:403
 msgid "This is the final release of WordPress %s"
 msgstr "See on WordPress %s lõppversioon"
 
@@ -958,17 +958,17 @@ msgid "Reach out to WordPress Core developers to ensure you'll never have this p
 msgstr "Et seda probleemi tulevikus mitte kohata, võta ühendust WordPressi arendajatega."
 
 #. translators: 1: WordPress version number, 2: Link to update WordPress
-#: wp-admin/about.php:375
+#: wp-admin/about.php:400
 msgid "Important! Your version of WordPress (%1$s) will stop receiving security updates in the near future. To keep your site secure, please <a href=\"%2$s\">update to the latest version of WordPress</a>."
 msgstr "NB! Sinu WordPressi versioon (%1$s) ei saa varsti enam turvauuendusi. Jätkuva turvalisuse saavutamiseks palun <a href=\"%2$s\">uuenda WordPress kõige uuemale versioonile</a>."
 
 #. translators: 1: WordPress version number, 2: Link to update WordPress
-#: wp-admin/about.php:372
+#: wp-admin/about.php:397
 msgid "Important! Your version of WordPress (%1$s) is no longer supported, you will not receive any security updates for your website. To keep your site secure, please <a href=\"%2$s\">update to the latest version of WordPress</a>."
 msgstr "NB! Sinu WordPressi versiooni (%1$s) enam ei toetata ning see ei saa enam turvauuendusi. Jätkuva turvalisuse saavutamiseks palun <a href=\"%2$s\">uuenda WordPress kõige uuemale versioonile</a>."
 
 #. translators: %s: Version number.
-#: wp-admin/about.php:246
+#: wp-admin/about.php:271
 msgid "Learn more about WordPress %s"
 msgstr "Lisateave WordPressi %s kohta"
 
@@ -1873,7 +1873,7 @@ msgstr "Lisa uus rakenduse parool"
 msgid "Required to create an Application Password, but not to update the user."
 msgstr "Nõutav rakenduse parooli loomiseks, kuid mitte kasutajainfo uuendamiseks."
 
-#: wp-admin/about.php:316
+#: wp-admin/about.php:341
 msgid "Go to Updates"
 msgstr "Uuenduste lehele"
 
@@ -2181,7 +2181,7 @@ msgstr "Väärtus \"%1$s\" on väiksem kui \"%2$s\""
 msgid "Environment type"
 msgstr "Keskkonna tüüp"
 
-#: wp-admin/about.php:232
+#: wp-admin/about.php:257
 msgid "Accessibility"
 msgstr "Ligipääsetavus"
 
@@ -3813,7 +3813,7 @@ msgstr "https://make.wordpress.org/hosting/handbook/handbook/server-environment/
 msgid "The WordPress Hosting Team maintains a list of those modules, both recommended and required, in <a href=\"%1$s\" %2$s>the team handbook%3$s</a>."
 msgstr "WordPressi käsiraamat haldab nende moodulite nimekirja, mida soovitab (ja tegelikult nõuab) <a href=\"%1$s\" %2$s>käsiraamat%3$s</a>."
 
-#: wp-admin/about.php:222 wp-admin/includes/class-wp-site-health.php:259
+#: wp-admin/about.php:247 wp-admin/includes/class-wp-site-health.php:259
 #: wp-admin/includes/class-wp-site-health.php:737
 #: wp-admin/includes/class-wp-site-health.php:884
 #: wp-admin/includes/class-wp-site-health.php:1122
@@ -5108,7 +5108,7 @@ msgstr "See plugin ei tööta sinu praeguste WordPressi ja PHP versioonidega."
 
 #. translators: %s: WordPress version number.
 #. translators: %s: WordPress version.
-#: wp-admin/about.php:298 wp-admin/includes/update.php:323
+#: wp-admin/about.php:323 wp-admin/includes/update.php:323
 #: wp-admin/index.php:119 wp-admin/install.php:249 wp-admin/update-core.php:94
 #: wp-admin/upgrade.php:81
 msgid "https://wordpress.org/documentation/wordpress-version/version-%s/"
@@ -7416,7 +7416,7 @@ msgid "(Currently set to: %s)"
 msgstr "(Praegu: %s)"
 
 #. translators: %s: WordPress version number.
-#: wp-admin/about.php:346
+#: wp-admin/about.php:371
 msgid "<strong>Version %s</strong> addressed one security issue."
 msgstr "<strong>Versioon %s</strong> lahendas ühe turvaprobleemi."
 
@@ -7428,15 +7428,15 @@ msgstr "https://en.gravatar.com/"
 msgid "Profile Picture"
 msgstr "Profiili pilt"
 
-#: wp-admin/about.php:337
+#: wp-admin/about.php:362
 msgid "Maintenance Releases"
 msgstr "Hooldusväljalasked"
 
-#: wp-admin/about.php:340
+#: wp-admin/about.php:365
 msgid "Security Releases"
 msgstr "Turvaväljalasked"
 
-#: wp-admin/about.php:343
+#: wp-admin/about.php:48 wp-admin/about.php:368
 msgid "Maintenance and Security Releases"
 msgstr "Hooldus- ja turvaväljalasked"
 
@@ -10742,15 +10742,16 @@ msgid "Show Toolbar when viewing site"
 msgstr "Näita esilehel tööriistariba"
 
 #. translators: 1: WordPress version number, 2: Plural number of bugs.
-#: wp-admin/about.php:53 wp-admin/about.php:351
+#: wp-admin/about.php:53 wp-admin/about.php:376
 msgid "<strong>Version %1$s</strong> addressed %2$s bug."
 msgid_plural "<strong>Version %1$s</strong> addressed %2$s bugs."
 msgstr[0] "<strong>Versioon %1$s</strong> parandas %2$s vea."
 msgstr[1] "<strong>Versioon %1$s</strong> parandas %2$s viga."
 
+#. translators: 1: WordPress version number, 2: Plural number of bugs.
 #. translators: 1: WordPress version number, 2: Plural number of bugs. Singular
 #. security issue.
-#: wp-admin/about.php:357
+#: wp-admin/about.php:78 wp-admin/about.php:382
 msgid "<strong>Version %1$s</strong> addressed a security issue and fixed %2$s bug."
 msgid_plural "<strong>Version %1$s</strong> addressed a security issue and fixed %2$s bugs."
 msgstr[0] "<strong>Versioon %1$s</strong> parandas turvavea ning %2$s bugi."
@@ -10758,7 +10759,7 @@ msgstr[1] "<strong>Versioon %1$s</strong> parandas turvavea ning %2$s bugi."
 
 #. translators: 1: WordPress version number, 2: Plural number of bugs. More
 #. than one security issue.
-#: wp-admin/about.php:363
+#: wp-admin/about.php:388
 msgid "<strong>Version %1$s</strong> addressed some security issues and fixed %2$s bug."
 msgid_plural "<strong>Version %1$s</strong> addressed some security issues and fixed %2$s bugs."
 msgstr[0] "<strong>Versioon %1$s</strong> tõstis turvalisust ning parandas %2$s vea."
@@ -10766,7 +10767,7 @@ msgstr[1] "<strong>Versioon %1$s</strong> tõstis turvalisust ning parandas %2$s
 
 #. translators: %s: HelpHub URL.
 #. translators: %s: Documentation URL.
-#: wp-admin/about.php:65 wp-admin/about.php:369
+#: wp-admin/about.php:65 wp-admin/about.php:90 wp-admin/about.php:394
 msgid "For more information, see <a href=\"%s\">the release notes</a>."
 msgstr "Lisainfot leiad <a href=\"%s\">väljalaskemärkmetest</a>."
 
@@ -10775,20 +10776,20 @@ msgstr "Lisainfot leiad <a href=\"%s\">väljalaskemärkmetest</a>."
 msgid "What&#8217;s New"
 msgstr "Uued asjad"
 
-#: wp-admin/about.php:339
+#: wp-admin/about.php:364
 msgid "Security Release"
 msgstr "Turvaparanduste väljaanne"
 
-#: wp-admin/about.php:48 wp-admin/about.php:336
+#: wp-admin/about.php:361
 msgid "Maintenance Release"
 msgstr "Hooldusversioon"
 
 #. translators: %s: WordPress version number.
-#: wp-admin/about.php:348
+#: wp-admin/about.php:373
 msgid "<strong>Version %s</strong> addressed some security issues."
 msgstr "<strong>Versioon %s</strong> lahendas paar turvaprobleemi."
 
-#: wp-admin/about.php:342
+#: wp-admin/about.php:367
 msgid "Maintenance and Security Release"
 msgstr "Hooldus- ja turvauuendus"
 
@@ -11057,15 +11058,15 @@ msgid "Because this is a multisite installation, you may add accounts that alrea
 msgstr "Kuna WordPress on paigaldatud mitmiksaidina, võid juba võrgustikus olemasolevaid kasutajaid lisada lihtsalt kasutajanime või e-postiaadressi ja kasutajarolli määramisega. Täiendavate võimaluste (parooli määramine jne) kasutamiseks pead olema võrgustikuhaldur - sel juhul saad kasutajainfot redigeerida kasutajanime kohal asuva hõljukviite kaudu."
 
 #. translators: %s: Version number.
-#: wp-admin/about.php:83
+#: wp-admin/about.php:108
 msgid "Welcome to WordPress %s"
 msgstr "Tere tulemast WordPressi versiooni %s"
 
-#: wp-admin/about.php:323
+#: wp-admin/about.php:348
 msgid "Go to Dashboard &rarr; Home"
 msgstr "Töölauale &rarr; Esileht"
 
-#: wp-admin/about.php:316
+#: wp-admin/about.php:341
 msgid "Go to Dashboard &rarr; Updates"
 msgstr "Töölaud &rarr; Uuendused"
 
@@ -12261,13 +12262,13 @@ msgstr "<strong>Mall</strong> &mdash;  Mõned teemad sisaldavad kohandatud malle
 msgid "All updates have been completed."
 msgstr "Kõik uuendused on tehtud."
 
-#: wp-admin/edit-tags.php:275
-msgid "When adding a new category on this screen, you&#8217;ll fill in the following fields:"
-msgstr "Uue rubriigi lisamiseks pead täitma järgmised väljad:"
-
 #: wp-admin/edit-tags.php:262
 msgid "What&#8217;s the difference between categories and tags? Normally, tags are ad-hoc keywords that identify important information in your post (names, subjects, etc) that may or may not recur in other posts, while categories are pre-determined sections. If you think of your site like a book, the categories are like the Table of Contents and the tags are like the terms in the index."
 msgstr "Mis vahe on rubriikidel ja siltidel? Tavaliselt on siltideks töö käigus leitud võtmesõnad, mis tõstavad esile postituses leiduvat põhiinfot (nimed, teemad jne), mis võib esineda teistes postitustes või mitte. Rubriigid seevastu on eelnevalt paikapandud alajaotised. Kui ajaveeb on raamat, siis rubriigid on otsekui sisukord, sildid aga on võtmesõnad nimeregistris."
+
+#: wp-admin/edit-tags.php:275
+msgid "When adding a new category on this screen, you&#8217;ll fill in the following fields:"
+msgstr "Uue rubriigi lisamiseks pead täitma järgmised väljad:"
 
 #: wp-admin/edit-tags.php:277
 msgid "When adding a new tag on this screen, you&#8217;ll fill in the following fields:"
@@ -12832,7 +12833,7 @@ msgstr[1] "Kohustuslikud <span class=\"count\">(%s)</span>"
 msgid "Inactive:"
 msgstr "Väljalülitatud:"
 
-#: wp-admin/about.php:323 wp-admin/includes/network.php:166
+#: wp-admin/about.php:348 wp-admin/includes/network.php:166
 msgid "Go to Dashboard"
 msgstr "Töölauale"
 
