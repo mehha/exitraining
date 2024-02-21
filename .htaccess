@@ -2,6 +2,7 @@
     order deny,allow
     deny from all
     allow from 90.190.183.173
+    allow from 84.50.179.59
 </Files>
 
 RedirectMatch 404 /\.git
