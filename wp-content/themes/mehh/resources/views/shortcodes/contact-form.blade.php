@@ -18,6 +18,11 @@
     <input type="text" id="training" class="form-control" name="training" value="{!! $post_title !!}" placeholder="{!! $post_title !!}" readonly>
   </div>
 
+  <input type="hidden" name="training_id" value="ke{{get_the_ID()}}">
+  <input type="hidden" name="training_cat" value="@if(get_the_terms(get_the_ID(), 'trainings_category')){{get_the_terms(get_the_ID(), 'trainings_category')[0]->name}}@endif">
+  <input type="hidden" name="training_date_begin" value="@if(get_field('begin_date')){{get_field('begin_date')}}@endif">
+  <input type="hidden" name="training_date_end" value="@if(get_field('end_date')){{get_field('end_date')}}@endif">
+
   <div class="col-12 mb-3">
     <label class="form-label d-none" for="date">{{__('Date', 'sage')}}*</label>
     <input type="text" id="date" class="form-control" name="date"
@@ -35,6 +40,12 @@
   <div class="col-12 mb-2">
     <label class="form-label fw-bold d-none" for="personal-code">{{__('Personal code', 'sage')}}*</label>
     <input type="number" id="personal-code" class="form-control" name="personal_code" placeholder="{{__('Personal code', 'sage')}}*" required>
+    <div class="valid-feedback">
+      Korrektne isikukood.
+    </div>
+    <div class="invalid-feedback">
+      Palun sisestage korrektne isikukood.
+    </div>
   </div>
 
   <div class="col-12 mb-2">

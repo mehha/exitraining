@@ -1,3 +1,5 @@
+import {validateEstonianPersonalCode} from "../utilities/validate-est-personal-code";
+
 export function handleForms() {
   // Fetch all the forms we want to apply custom Bootstrap validation styles to
   const forms = document.querySelectorAll('.needs-validation')
@@ -10,11 +12,21 @@ export function handleForms() {
 
       // Recaptcha
       let reCaptcha;
+      let personalCodeValidated = false
       let FormCaptcha = document.querySelector('#g-recaptcha');
       const endTime = performance.now();
       const timeElapsed = endTime - startTime;
+      const personalCode = form.querySelector('input[name="personal_code"]');
+      console.log('personalCode', personalCode)
 
       if (event.target.classList.contains('needs-validation') && FormCaptcha) {
+        if (validateEstonianPersonalCode(personalCode.value)) {
+          personalCodeValidated = true
+          personalCode.setCustomValidity('')
+        } else {
+          personalCode.setCustomValidity('Palun kontrollige isikukoodi')
+        }
+
         // eslint-disable-next-line no-undef
         if ( grecaptcha.getResponse(renderForm) === '' ) {
           reCaptcha = false;
@@ -24,9 +36,10 @@ export function handleForms() {
         }
       } else {
         reCaptcha = true;
+        personalCodeValidated = true
       }
 
-      if (!form.checkValidity() || !reCaptcha || timeElapsed < 6000) {
+      if (!form.checkValidity() || !reCaptcha || timeElapsed < 6000 || !personalCodeValidated) {
         event.preventDefault()
         event.stopPropagation()
       }

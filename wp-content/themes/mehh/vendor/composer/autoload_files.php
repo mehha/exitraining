@@ -22,8 +22,10 @@ return array(
     'f598d06aa772fa33d905e87be6398fb1' => $vendorDir . '/symfony/polyfill-intl-idn/bootstrap.php',
     '23c18046f52bef3eea034657bafda50f' => $vendorDir . '/symfony/polyfill-php81/bootstrap.php',
     'b6b991a57620e2fb6b2f66f03fe9ddc2' => $vendorDir . '/symfony/string/Resources/functions.php',
+    '7b11c4dc42b3b3023073cb14e519683c' => $vendorDir . '/ralouphie/getallheaders/src/getallheaders.php',
     'e39a8b23c42d4e1452234d762b03835a' => $vendorDir . '/ramsey/uuid/src/functions.php',
     '7018e3dbeb54682c59da60bb2ff4f971' => $vendorDir . '/roots/support/helpers.php',
+    '37a3dc5111fe8f707ab4c132ef1dbc62' => $vendorDir . '/guzzlehttp/guzzle/src/functions_include.php',
     '2fb983e63247f84d8365e00e3015e40b' => $vendorDir . '/log1x/sage-svg/src/helpers.php',
     '1d3e394e13b0f60fc9509fa2e09fa96e' => $vendorDir . '/roots/acorn/src/Roots/helpers.php',
 );
