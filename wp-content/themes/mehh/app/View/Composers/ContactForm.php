@@ -189,7 +189,7 @@ class ContactForm extends Composer
                         'records' => [
                             [
                                 'fields' => [
-                                    "Staatus" => "Maksmata",
+                                    "Staatus" => "Ootel",
                                     "Osalejad" => $participants,
                                     "Märkused" => $message,
                                     "Klient" => [$clientId],
