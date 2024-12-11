@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: production
-      url: https://neemekula.ee
+      url: https://koolitusekspert.ee
     steps:
       - name: Checkout to master
         uses: actions/checkout@master
