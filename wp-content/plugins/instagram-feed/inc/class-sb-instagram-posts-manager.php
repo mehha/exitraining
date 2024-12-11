@@ -458,15 +458,16 @@ class SB_Instagram_Posts_Manager {
 
 		$max = isset( $this->limit ) && $this->limit > 1 ? $this->limit : 1;
 
-		$oldest_posts = $wpdb->get_results( "SELECT id, media_id FROM $table_name ORDER BY last_requested ASC LIMIT $max", ARRAY_A );
+		$oldest_posts = $wpdb->get_results( "SELECT id, media_id, mime_type FROM $table_name ORDER BY last_requested ASC LIMIT $max", ARRAY_A );
 
 		$upload        = wp_upload_dir();
 		$file_suffixes = array( 'thumb', 'low', 'full' );
 
 		foreach ( $oldest_posts as $post ) {
-
+			$extension = isset( $post['mime_type'] ) &&  $post['mime_type'] === 'image/webp' 
+							? '.webp' : '.jpg';
 			foreach ( $file_suffixes as $file_suffix ) {
-				$file_name = trailingslashit( $upload['basedir'] ) . trailingslashit( SBI_UPLOADS_NAME ) . $post['media_id'] . $file_suffix . '.jpg';
+				$file_name = trailingslashit( $upload['basedir'] ) . trailingslashit( SBI_UPLOADS_NAME ) . $post['media_id'] . $file_suffix . $extension;
 				if ( is_file( $file_name ) ) {
 					unlink( $file_name );
 				}
@@ -618,19 +619,23 @@ class SB_Instagram_Posts_Manager {
 		);
 		delete_option( 'sbi_hashtag_ids' );
 		delete_option( 'sbi_local_avatars' );
+		delete_option( 'sbi_local_avatars_info' );
 
 		$upload     = wp_upload_dir();
 		$upload_dir = $upload['basedir'];
 		$upload_dir = trailingslashit( $upload_dir ) . SBI_UPLOADS_NAME;
+		global $sbi_notices;
 		if ( ! file_exists( $upload_dir ) ) {
 			$created = wp_mkdir_p( $upload_dir );
 			if ( $created ) {
 				$this->remove_error( 'upload_dir' );
+				$sbi_notices->remove_notice( 'upload_dir' );
 			} else {
 				$this->add_error( 'upload_dir', __( 'There was an error creating the folder for storing resized images.', 'instagram-feed' ) . ' ' . $upload_dir );
 			}
 		} else {
 			$this->remove_error( 'upload_dir' );
+			$sbi_notices->remove_notice( 'upload_dir' );
 		}
 
 		sbi_create_database_table();
@@ -796,6 +801,9 @@ class SB_Instagram_Posts_Manager {
 
 		update_option( 'sb_instagram_errors', $this->errors, false );
 		sb_instagram_cron_clear_cache();
+
+		global $sbi_notices;
+		$sbi_notices->remove_notice( 'critical_error' );
 	}
 
 	/**

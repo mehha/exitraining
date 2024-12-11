@@ -1,0 +1,29 @@
+name: Deploy to Zone
+on:
+  push:
+    branches:
+      - master
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: production
+      url: https://neemekula.ee
+    steps:
+      - name: Checkout to master
+        uses: actions/checkout@master
+      - name: Set up SSH
+        run: |
+          mkdir -p ~/.ssh/
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan -H ${{ secrets.HOST_SERVER_IP }} >> ~/.ssh/known_hosts
+      - name: Copy files to server
+        run: |
+          rsync -avz --delete \
+          --exclude='.git/' \
+          --exclude='.github/' \
+          --exclude='node_modules/' \
+          --exclude='config-staging.php' \
+          --exclude='wp-content/uploads/' \
+          ./ ${{ secrets.SSH_LOGIN_CREDS }}:/data01/virt100729/domeenid/www.koolitusekspert.ee/htdocs

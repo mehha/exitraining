@@ -12,6 +12,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	die( '-1' );
 }
 
+use InstagramFeed\Helpers\Util;
+
 class SB_Instagram_Display_Elements {
 
 	/**
@@ -119,7 +121,8 @@ class SB_Instagram_Display_Elements {
 						}
 					}
 					if ( isset( $suffix ) ) {
-						$media_url = sbi_get_resized_uploads_url() . $resized_images[ $post_id ]['id'] . $suffix . '.jpg';
+						$extension = isset( $resized_images[ $post_id ]['extension'] ) ? $resized_images[ $post_id ]['extension'] : '.jpg';
+						$media_url = sbi_get_resized_uploads_url() . $resized_images[ $post_id ]['id'] . $suffix . $extension;
 						return $media_url;
 					}
 				}
@@ -145,7 +148,8 @@ class SB_Instagram_Display_Elements {
 				 && $resized_images[ $post_id ]['id'] !== 'pending'
 				 && $resized_images[ $post_id ]['id'] !== 'video'
 				 && $resized_images[ $post_id ]['id'] !== 'error' ) {
-				$media_url = sbi_get_resized_uploads_url() . $resized_images[ $post_id ]['id'] . 'full.jpg';
+				$extension = isset( $resized_images[ $post_id ]['extension'] ) ? $resized_images[ $post_id ]['extension'] : '.jpg';
+				$media_url = sbi_get_resized_uploads_url() . $resized_images[ $post_id ]['id'] . 'full' .$extension;
 			} else {
 				if ( SB_Instagram_GDPR_Integrations::doing_gdpr( $settings ) ) {
 					return trailingslashit( SBI_PLUGIN_URL ) . 'img/thumb-placeholder.png';
@@ -337,8 +341,14 @@ class SB_Instagram_Display_Elements {
 	 * @since 6.0
 	 */
 	public static function get_sbi_images_style( $settings ) {
+
+		
 		if ( ! empty( $settings['imagepadding'] ) ) {
-			return ' style="padding: ' . (int) $settings['imagepadding'] . esc_attr( $settings['imagepaddingunit'] ) . ';"';
+			if ( ! is_admin() && Util::sbi_legacy_css_enabled() ) {
+				return ' style="padding: ' . (int) $settings['imagepadding'] . esc_attr( $settings['imagepaddingunit'] ) . ';"';
+			} else {
+				return ' style="gap: ' . (int) $settings['imagepadding'] * 2 . esc_attr( $settings['imagepaddingunit'] ) . ';"';
+			}
 		}
 		return '';
 	}
@@ -535,7 +545,7 @@ class SB_Instagram_Display_Elements {
 	public static function get_palette_class( $settings, $context = '' ) {
 		$customizer = sbi_doing_customizer( $settings );
 		if ( $customizer ) {
-			return wp_kses_post(' $parent.getPaletteClass() ');
+			return ' $parent.getPaletteClass() ';
 		} else {
 			$feed_id_addition = ! empty( $settings['colorpalette'] ) && $settings['colorpalette'] === 'custom' ? '_' . $settings['feed'] : '';
 			$palette_class    = ! empty( $settings['colorpalette'] ) && $settings['colorpalette'] !== 'inherit' ? ' sbi' . $context . '_palette_' . $settings['colorpalette'] . $feed_id_addition : '';
@@ -623,6 +633,15 @@ class SB_Instagram_Display_Elements {
 			)
 		);
 
+		$atts .= self::print_element_attribute(
+			$customizer,
+			array(
+				'attr'        => 'data-item-padding',
+				'vue_content' => '$parent.customizerFeedData.settings.imagepadding',
+				'php_content' => $settings['imagepadding'],
+			)
+		);
+
 		return $atts;
 	}
 
@@ -682,7 +701,7 @@ class SB_Instagram_Display_Elements {
 			sbi_doing_customizer( $settings ),
 			array(
 				'attr'        => 'title',
-				'vue_content' => '\'@\' + $parent.getHeaderUserName()',
+				'vue_content' => '$parent.getHeaderUserNameTitle()',
 				'php_content' => '@' . esc_attr( $username ),
 			)
 		);
@@ -1207,13 +1226,14 @@ class SB_Instagram_Display_Elements {
 	 */
 	public static function vue_check_header_enabled( $settings, $header_type, $vue_args ) {
 		$customizer = sbi_doing_customizer( $settings );
-		$result_vue = '';
-		if ( $customizer ) {
-			$result_vue = '$parent.valueIsEnabled($parent.customizerFeedData.settings.showheader) ' . $vue_args['condition'];
-			$result_vue = ' v-if=" ' . $result_vue . '" ';
+		$vue_args = !empty($vue_args['condition']) ? $vue_args['condition'] : false;
+		
+		if ( $customizer && $vue_args ) {
+			$result_vue = '$parent.valueIsEnabled($parent.customizerFeedData.settings.showheader) ' . esc_attr($vue_args);
+			return ' v-if=" ' . esc_attr($result_vue) . '" ';
 		}
 
-		return wp_kses_post($result_vue);
+		return '';
 	}
 
 	/**
@@ -1227,11 +1247,13 @@ class SB_Instagram_Display_Elements {
 	 */
 	public static function should_show_element_vue( $settings, $setting_name, $custom_condition = false ) {
 		$customizer = sbi_doing_customizer( $settings );
-		$vue_element = '';
+		$setting_name = !empty($setting_name) ? $setting_name : false;
+		$custom_condition = $custom_condition != false ? $custom_condition : '';
+
 		if ( $customizer ) {
-			$vue_element = ' v-if="$parent.valueIsEnabled($parent.customizerFeedData.settings.' . $setting_name . ')' . ( $custom_condition != false ? $custom_condition : '' ) . '" ';
+			return ' v-if="$parent.valueIsEnabled($parent.customizerFeedData.settings.' . esc_attr($setting_name) . ')' . ( esc_attr($custom_condition) ) . '" ';
 		}
-		return wp_kses_post($vue_element);
+		return '';
 	}
 
 	/**
@@ -1245,11 +1267,10 @@ class SB_Instagram_Display_Elements {
 	 * @since 6.0
 	 */
 	public static function should_print_element_vue( $customizer, $content ) {
-		$print_element = '';
 		if ( $customizer ) {
-			$print_element = ' v-html="' . $content . '" ';
+			return ' v-html="' . esc_html($content) . '" ';
 		}
-		return wp_kses_post($print_element);
+		return '';
 	}
 
 	/**
@@ -1263,11 +1284,10 @@ class SB_Instagram_Display_Elements {
 	 * @since 6.0
 	 */
 	public static function create_condition_vue( $customizer, $condition ) {
-		$if_statement = '';
 		if ( $customizer ) {
-			$if_statement = ' v-if="' . $condition . '" ';
+			return ' v-if="' .  esc_attr($condition)  . '" ';
 		}
-		return wp_kses_post($if_statement);
+		return '';
 	}
 
 	/**
@@ -1281,9 +1301,9 @@ class SB_Instagram_Display_Elements {
 	 * @since 6.0
 	 */
 	public static function print_element_attribute( $customizer, $args ) {
-		$print_element = ' ' . esc_attr($args['attr']) . '="' . esc_attr($args['php_content']) . '"';
+		$print_element = ' ' . sanitize_key($args['attr']) . '="' . esc_attr($args['php_content']) . '"';
 		if ( $customizer ) {
-			$print_element = ' :' . esc_attr($args['attr']) . '="' . wp_kses_post($args['vue_content']) . '"';
+			$print_element = ' :' . sanitize_key($args['attr']) . '="' . esc_attr($args['vue_content']) . '"';
 		}
 		return $print_element;
 	}
